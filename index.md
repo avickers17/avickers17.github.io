@@ -10,4 +10,4 @@ Thank you!
 ## Homeworks:
 #### Homework 1:    
 * [HW1 Blog](https://github.com/avickers17/avickers17.github.io/tree/master/HW1)
-* [HW1 Link](https://avickers17.github.io/HW1/index.html)
+* [HW Link](https://avickers17.github.io/CS460)
