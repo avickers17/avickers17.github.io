@@ -4,7 +4,7 @@ Here you will find my works for CS460 Homework Information!
 
 # Code Repository
 Code and Works can be found below:
-[Repository](https://github.com/avickers17/avickers17.github.io)
+*[Repository](https://github.com/avickers17/avickers17.github.io)
 
 #Homeworks for CS460
 1. [Homework 1]: (https://avickers17.github.io/CS460/HW1/)
