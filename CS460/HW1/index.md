@@ -15,12 +15,12 @@ Our first assignment was to learn Git, HTML, CSS, and BootStrap.  Then to make a
 To start I immediately downloaded Git from my bash shell.  I leveraged many resources online and learned all about how to use it and how to issue commands.  Additionally in clase we broke down how git works behind the scenes to update your repository which was very helpful.  The main functions that I used git for were:
 
 ```
-git clone repository /*to get a respository sent to me, namely mine*/
-git pull /*to pull information from my repository at git to my local*/
+git clone repository /*to get updates from my online repository*/
+git pull /*to pull info from my repository at github to my local*/
 git add file1 file2 ... /*to stage my files locally*/
-git commit file1 file2 -m "Helful message" /*to commit my staged files and include a messag*/)
-git push /*to push my local resposity data to update my git repository*/
-git status /*to find out what status my local respository is at before making commits or additions*/
+git commit file1 file2 -m "Helful message" /*commit my staged files*/)
+git push /*to push my local resposity data*/
+git status /*to find out my local respository status & updates*/
 ```
 
 I made sure to use multiple git push commands to confirm changes were being made and to see the updates to my site and respository real time. 
@@ -30,14 +30,14 @@ I put in many hours watching videos for each program as these were newer languag
 
 ```
 <nav class="navbar navbar-default>
-  <div class="container">
-	<ul class="nav navbar-nav">
-	  <li class="home"><a href="index.html">Homepage</a></li>
-		<li><a href="lists.html">Popular Board Games</a></li>
-		  <li><a href="columns.html">Places to Buy</a></li>
-		  <li><a href="contact.html">Contact Me</a></li>
-	</ul>
-  </div>
+ <div class="container">
+  <ul class="nav navbar-nav">
+   <li class="home"><a href="index.html">Homepage</a></li>
+   <li><a href="lists.html">Popular Board Games</a></li>
+   <li><a href="columns.html">Places to Buy</a></li>
+   <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+ </div>
 </nav>
 ```
 
