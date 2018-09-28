@@ -8,4 +8,5 @@ Code and Works can be found via this link: [Repository](https://github.com/avick
 # Homeworks for CS460
 1. [Homework 1](https://avickers17.github.io/CS460/HW1): Git,HTML,CSS, and BootStrap
 
-
+# Notes - Final
+1. [Git]()
