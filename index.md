@@ -1,6 +1,6 @@
 # Hello and Welcome
 
-My Name is Adrian Vickers, Sr. at Western Oregon University!  This is my landing page for everything completed this year!  Feel free to browse further below for items completed this year by me and contact me if you have any questions!
+My Name is Adrian Vickers, a Sr. at Western Oregon University!  This is my landing page for everything completed this year!  Feel free to browse further below for items that I worked on and contact me if you have any questions!
 
 Thank you! 
 
