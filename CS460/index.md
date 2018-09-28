@@ -1,9 +1,12 @@
-# Hello and Welcome
+# Welcome to My Homework Page
 
-My Name is Adrian Vickers, Sr. at Western Oregon University!  This is my landing page for everything completed this year!  Feel free to browse further below for items completed this year by me and contact me if you have any questions!
+Here you will find my works for CS460 Homework Information!
 
-Thank you! 
+# Code Repository
+Code and Works can be found below:
+[Repository](https://github.com/avickers17/avickers17.github.io)
 
-### Code Repository
-* [Repository](https://github.com/avickers17/avickers17.github.io)
+#Homeworks for CS460
+1. [Homework 1]: (https://avickers17.github.io/CS460/HW1/)
+
 
