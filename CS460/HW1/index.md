@@ -12,8 +12,8 @@ Our first assignment was to learn Git, HTML, CSS, and BootStrap.  Then to make a
 3. [Code Repository for HW1](https://github.com/avickers17/avickers17.github.io/tree/master/CS460/HW1/website)
 
 ## Want to go back?
-Back to my Homepage: [Homepage](https://avickers17.github.io)
-Back to my Homework Page: [Homework](https://avickers17.github.io/CS460)
+* Back to my Homepage: [Homepage](https://avickers17.github.io)
+* Back to my Homework Page: [Homework](https://avickers17.github.io/CS460)
 
 ### Git
 To start I immediately downloaded Git from my bash shell.  I leveraged many resources online and learned all about how to use it and how to issue commands.  Additionally in clase we broke down how git works behind the scenes to update your repository which was very helpful.  The main functions that I used git for were:
