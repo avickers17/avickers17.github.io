@@ -16,7 +16,7 @@ Our first assignment was to learn Git, HTML, CSS, and BootStrap.  Then to make a
 * Back to my Homework Page: [Homework](https://avickers17.github.io/CS460)
 
 ### Git
-To start I immediately downloaded Git from my bash shell.  I leveraged many resources online and learned all about how to use it and how to issue commands.  Additionally in clase we broke down how git works behind the scenes to update your repository which was very helpful.  The main functions that I used git for were:
+To start I immediately downloaded Git from my bash shell.  I leveraged many resources online and learned all about how to use it and how to issue commands.  Additionally in class we broke down how git works behind the scenes to update your repository which was very helpful.  The main functions that I used git for were:
 
 ```
 git clone repository /*to get updates from my online repository*/
