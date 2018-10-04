@@ -1,0 +1,73 @@
+/* Page Overall Formatting*/
+body{
+	background-color:#CCCCCC;
+	color #000;
+	
+	font-family: Calibri;
+	font-size:20px;
+	font-weight:normal;
+	
+	line-height: 1.6em;
+	margin:20px 20px;
+}
+ /* class that helps reset position of next page element*/
+.clr{
+	clear:both;
+}
+ /* formatting for links */
+a{
+text-decoration:none;
+color: white;
+}
+ /* formatting for links when hovered over */
+a:hover{
+	color: purple;
+	text-decoration:none;
+}
+ /* formatting for nav bar header */
+.container h1{
+	color:Black;
+	text-align:left;
+	margin:0;
+}
+ /* formatting for nav bar */
+.navbar{
+	background: black;
+}
+ /* formatting for transparent boxes/columns for boardgame displays */
+.block{
+	float:left;
+	width:33.3%;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+	position: relative;
+	text-align: center;
+
+}
+ /* alignment and size of columns */
+.column {
+    float: left;
+    width: 50%;
+}
+ /* alignment and size of rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+ /* color of stores class to stand out on page */
+.stores{
+	color: brown;
+}
+ /* link colors on contact.html page */
+#link{
+color:blue
+}
+
+#link:hover{
+	color:purple;
+}
+.labels{
+	font-weight: bold;
+}
+

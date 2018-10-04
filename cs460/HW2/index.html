@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="mycss.css">
+	<!--jQuery CDN from Google-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>My Website</title>
+  </head>
+  
+  <body>
+  <div class="container">
+	<h1 class="page-header">Adrian's Board Games</h1>
+	<hr>
+	<nav class="navbar navbar-default">
+			<ul class="navbar-nav mr-auto">
+				<li class="home"><a href="index.html">Homepage</a></li>
+				<li><a href="lists.html">Popular Board Games</a></li>
+				<li><a href="columns.html">Places to Buy</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</nav>
+	<hr>
+	<div class="clear-fix"></div>
+	<div class="container">
+	  <h2 id="h2">Welcome</h2> 
+		<p>This is Board Games R Us! Here you will find a large amount of board game options for your viewing pleasure.
+		</p>
+		</div>
+	<hr>
+	<div class="container">
+	<h2>Game Type Finder</h2>
+	  <p>Help Us Determine Some Suggested Games You Might Like:</p>
+	    
+		<label class="labels">Type</label>
+		<select class="labels" name="type" id="type">
+		    <option value="coop">Co-op</option>
+			<option value="competative">Competative</option>
+		</select>
+		<br/>
+		<label class="labels">Style</label>
+		<select class="labels" name="style" id="style">
+		    <option value="dice-rolling">Dice Rolling</option>
+			<option value="puzzle">Puzzle</option>
+		</select>
+		<br/>
+		<label class="labels">Win Condition</label>
+		<select class="labels" name="win" id="win">
+		    <option value="points">Points</option>
+			<option value="objective">Objective</option>
+		</select>
+		<br/>
+	<input id="submit" type="submit" value="Submit" onclick="clicked()">
+	<form id="myForm">
+	  <input id="reset" type="reset" value="Reset Search" onclick="resetFunction()">
+	</form>
+	<hr>
+	<div class ="container" id="newList" display="none">
+		<h2>Recommended Games:</h2>
+		  <table class="table">
+			<thead class="thead">
+				<tr>
+					<th scope="col"></th>
+					<th scope="col">Type</th>
+					<th scope="col">Style</th>
+					<th scope="col">Win Condition</th>
+				</tr>
+			</thead id ="tableBegin">
+		</table>
+	</div>
+	<hr>
+	<img src="Images/pieces.jpg" class="img-fluid" id="pieces" alt="Responsive image">
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+	
+	<script>
+	function listMaker(newList, type, style, win){
+	  $(".table").append("<tbody><tr><th scope='row'>" + newList[0].substr(3) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td>");
+	  $(".table").append("<tbody><tr><th scope='row'>" + newList[1].substr(3) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td>");
+	  $(".table").append("<tbody><tr><th scope='row'>" + newList[2].substr(3) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td>");
+	}
+	function listFiller(type,style,win,fullList){
+	 var newList = [];
+	 var x;
+	 var y;
+	 var z;
+	 if(type.value == "coop"){
+	   x = "0";}
+	 else{ 
+	   x = "1";}
+	 if(style.value == "dice-rolling"){
+	   y = "0";}
+	 else{
+	   y = "1";}
+	 if(win.value == "points"){
+	   z = "0";}
+	 else{
+	   z = "1";}
+	 var check = x+y+z;
+	 for(var i =0; i < 24; i++){
+	   if(fullList[i].substr(0,3) == check){
+	     newList.push(fullList[i]);
+		 }
+	 }
+	  return newList;
+	}
+	var fullList = ["000Big Book of Madness", "000Mansions of Madness", "000Zobicide","001Above & Below", "001Adenaline", "001Alien Frontiers","010Arcadia Quest", "010BloodRage", "010Carcassonne","100City of Iron", "100Dungeon", "100Dungeon Quest","011Empires of the Void", "011Five Tribes", "011Forbidden Island","110Formula D", "110Hogwarts Battle", "110Islebound","111Kemet", "111Kharnage", "111King of Tokyo","101Kingdom Builder", "101Klank", "101Lords of Waterdeep",];
+	function resetForm(){
+	  document.getElementById("myForm").reset();
+	  }
+	function clicked(){
+	  var type = document.getElementById('type');
+	  var sytle = document.getElementById('style');
+	  var win = document.getElementById('win');
+	  var newList = listFiller(type,style,win,fullList);
+	  $(".img-fluid").hide();
+	  $("#submit").hide();
+	  return listMaker(newList, type, style, win);
+	};
+	</script>
+  </body>
+</html>
