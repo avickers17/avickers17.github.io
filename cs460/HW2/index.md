@@ -23,7 +23,7 @@ Before getting started, we were asked in our assignment to put together a rough 
 
 ### HTML
 Most of my HTML and css script was similar as I was using my initial website from HW1, however I added some additional headings, form input classes, and buttons for search:
-```
+```html
 <!-- Title of user interface used to pull data based on users selections -->
 	<div class="container">
 	<h2>Game Type Finder</h2>
