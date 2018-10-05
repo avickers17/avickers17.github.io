@@ -12,7 +12,7 @@ Thank you!
 * [Repository](https://github.com/avickers17/avickers17.github.io)
 
 ## Homeworks:   
-* [HW Link](https://avickers17.github.io/cs460)
+* [HW Link](https://avickers17.github.io/cs460/)
 
 ## More To Come:
 Keep an eye out on this page for freaquent updates and information showcasing my current works!  I appreciate you visiting my page!
