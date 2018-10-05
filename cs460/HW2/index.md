@@ -25,42 +25,42 @@ Before getting started, we were asked in our assignment to put together a rough 
 Most of my HTML and css script was similar as I was using my initial website from HW1, however I added some additional headings, form input classes, and buttons for search:
 ```html
 <!-- Title of user interface used to pull data based on users selections -->
-	<div class="container">
-	<h2>Game Type Finder</h2>
-	  <p>Help Us Determine Some Suggested Games You Might Like:</p>
-	  	<!-- labels and drop down slectors -->
-		<label class="labels">Type</label>
+  <div class="container">
+  <h2>Game Type Finder</h2>
+    <p>Help Us Determine Some Suggested Games You Might Like:</p>
+	<!-- labels and drop down slectors -->
+	  <label class="labels">Type</label>
 		<select class="labels" name="type" id="type">
-		    <option value="coop">Co-op</option>
-			<option value="competative">Competative</option>
+		  <option value="coop">Co-op</option>
+	      <option value="competative">Competative</option>
 		</select>
 		<br/>
-		<label class="labels">Style</label>
+	  <label class="labels">Style</label>
 		<select class="labels" name="style" id="style">
-		    <option value="dice-rolling">Dice Rolling</option>
-			<option value="puzzle">Puzzle</option>
+		  <option value="dice-rolling">Dice Rolling</option>
+		  <option value="puzzle">Puzzle</option>
 		</select>
 		<br/>
-		<label class="labels">Win Condition</label>
+	  <label class="labels">Win Condition</label>
 		<select class="labels" name="win" id="win">
-		    <option value="points">Points</option>
-			<option value="objective">Objective</option>
+		  <option value="points">Points</option>
+	      <option value="objective">Objective</option>
 		</select>
-		<div>
-	    <label class="labels">Minimum Number of Players:</label>
-		  <input type="text" name="min" id="min" placeholder="2-8"/>
-	  </div>
-		<br/>
-		<!-- Submit button that starts jQuery -->
-	  <input id="submit" type="submit" value="Submit" onclick="clicked()">
-	  <input id="reset" type="reset" value="Reset Search" onclick="removeNewTable()">
-	   <hr>
-	  <div class ="container" id="newList">
-		<h2 class="tableBegin">Recommended Games:</h2>
-	  </div>
-	  <hr>
-	  <img src="Images/pieces.jpg" class="img-fluid" id="pieces" alt="Responsive image">
-	</div>
+  <div>
+	  <label class="labels">Minimum Number of Players:</label>
+	    <input type="text" name="min" id="min" placeholder="2-8"/>
+  </div>
+  <br/>
+  <!-- Submit button that starts jQuery -->
+  <input id="submit" type="submit" value="Submit" onclick="clicked()">
+  <input id="reset" type="reset" value="Reset Search" onclick="removeNewTable()">
+  <hr>
+  <div class ="container" id="newList">
+  <h2 class="tableBegin">Recommended Games:</h2>
+  </div>
+  <hr>
+  <img src="Images/pieces.jpg" class="img-fluid" id="pieces" alt="Responsive image">
+  </div>
 ```
 ### Javascript
 Javascript overall reminded me of basic languages such as c and c++.  I found that once I knew where to put in my scripting information on my HTML page, that coding became easier.  You simply had to direct your code and fuctions to specific class objects on the page that would initiate your code.  Examples of this would be button pressing, toggle drop down boxes, or check marks that you could include on your webpage.  Then simply include a section within your HTML script object that would initiate your fuction.  
@@ -69,8 +69,9 @@ An Example of Javascript is listed below:
 ```html
 <html>
   <body>
-<!-- Submit button that starts jQuery -->
-	<input id="submit" type="submit" value="Submit" onclick="clicked()">
+  <!-- Submit button that starts jQuery -->
+	<input id="submit" type="submit" value="Submit" 
+	onclick="clicked()">
   </body>
 </html>
 ```
@@ -132,13 +133,13 @@ Once validated, the above function would return true and this would initialize m
 #### Add List to the Page
 Once the new list was created, I would add this list in the form of a table back to the user with information confirming their selection with the names and maximum number of players that could be supported simply for their reference.  Mostly this was accomplished via JQuery:
 ```Javascript
-	//function used to create table based on user parameters
-	function listMaker(newList, type, style, win){
-	$(".tableBegin").append("<table class='table'><thead class='thead'><tr><th scope='col'>Board Game Name</th><th scope='col'>Type</th><th scope='col'>Style</th><th scope='col'>Win Condition</th><th scope='col'>Maximum # of Players</th></tr></thead>").css("font-size","18px");
-	$(".table").append("<tbody><tr><th scope='row'>" + newList[0].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[0].substr(3,1) + "</td>");
-	$(".table").append("<tbody><tr><th scope='row'>" + newList[1].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[1].substr(3,1) + "</td>");
-	$(".table").append("<tbody><tr><th scope='row'>" + newList[2].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[2].substr(3,1) + "</td>");
-	}
+//function used to create table based on user parameters
+function listMaker(newList, type, style, win){
+  $(".tableBegin").append("<table class='table'><thead class='thead'><tr><th scope='col'>Board Game Name</th><th scope='col'>Type</th><th scope='col'>Style</th><th scope='col'>Win Condition</th><th scope='col'>Maximum # of Players</th></tr></thead>").css("font-size","18px");
+  $(".table").append("<tbody><tr><th scope='row'>" + newList[0].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[0].substr(3,1) + "</td>");
+  $(".table").append("<tbody><tr><th scope='row'>" + newList[1].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[1].substr(3,1) + "</td>");
+  $(".table").append("<tbody><tr><th scope='row'>" + newList[2].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[2].substr(3,1) + "</td>");
+}
 ```
 #### Reset Search Option
 To wrap up the search, I included a reset button.  This was made for two reasons, first to allow the user to search again, and secondly it would prevent the above code from continue to append to the table.  I hid the search button and repaced the button with the reset button to avoid this scenario.
