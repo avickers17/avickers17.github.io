@@ -155,3 +155,13 @@ To wrap up the search, I included a reset button.  This was made for two reasons
 With my search engine complete, adding additional games to my list or increasing the output of the search criteria would be easy edits as I had created a serial code that could be used for any addition that I wanted to add.  To save room on the page, I could also include a seperate file that housed this information, however I chose not to for the time being to keep things simple.  These are edits I will consider as my website continues to evolve.
 
 ![Finished Product](example.png)
+
+### Git Branching
+Finally to complete this process, I had to merge my branch back into the master for my repository.  This was completed by a simple git merge function that was done after i made changes to my master, and completed my work on the side branch that I had created to complete HW2 on.
+
+```
+git branch HW2-Feature
+git checkout master
+git merge HW2-Feature
+git push origin master
+```
