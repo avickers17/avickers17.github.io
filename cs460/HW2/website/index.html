@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="mycss.css">
+	<!--jQuery CDN from Google-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>My Website</title>
+  </head>
+  
+  <body>
+  <!-- Title -->
+  <div class="container">
+	<h1 class="page-header">Adrian's Board Games</h1>
+	<hr>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default">
+			<ul class="navbar-nav mr-auto">
+				<li class="home"><a href="index.html">Homepage</a></li>
+				<li><a href="lists.html">Popular Board Games</a></li>
+				<li><a href="columns.html">Places to Buy</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</nav>
+	<hr>
+	<div class="clear-fix"></div>
+	<!-- Intro to page -->
+	<div class="container">
+	  <h2 id="h2">Welcome</h2> 
+		<p>This is Board Games R Us! Here you will find a large amount of board game options for your viewing pleasure.
+		</p>
+		</div>
+	<hr>
+	<!-- Title of user interface used to pull data based on users selections -->
+	<div class="container">
+	<h2>Game Type Finder</h2>
+	  <p>Help Us Determine Some Suggested Games You Might Like:</p>
+	  	<!-- labels and drop down slectors -->
+		<label class="labels">Type</label>
+		<select class="labels" name="type" id="type">
+		    <option value="coop">Co-op</option>
+			<option value="competative">Competative</option>
+		</select>
+		<br/>
+		<label class="labels">Style</label>
+		<select class="labels" name="style" id="style">
+		    <option value="dice-rolling">Dice Rolling</option>
+			<option value="puzzle">Puzzle</option>
+		</select>
+		<br/>
+		<label class="labels">Win Condition</label>
+		<select class="labels" name="win" id="win">
+		    <option value="points">Points</option>
+			<option value="objective">Objective</option>
+		</select>
+		<div>
+	    <label class="labels">Minimum Number of Players:</label>
+		  <input type="text" name="min" id="min" placeholder="2-8"/>
+	  </div>
+		<br/>
+		<!-- Submit button that starts jQuery -->
+	  <input id="submit" type="submit" value="Submit" onclick="clicked()">
+	  <input id="reset" type="reset" value="Reset Search" onclick="removeNewTable()">
+	  <hr>
+	  <div class ="container" id="newList">
+		<h2 class="tableBegin">Recommended Games:</h2>
+	  </div>
+	  <hr>
+	  <img src="Images/pieces.jpg" class="img-fluid" id="pieces" alt="Responsive image">
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+	
+	<script>
+	//function to make sure that user enters number of players
+	function validateForm(){
+	    var min = document.getElementById('min')
+		if(min.value == null || min.value == ""){
+		  alert("Number of Players is Required");
+		  return false;
+	    }
+		if(min.value < 2){
+		  alert("Min Players must be between 2-8");
+		  return false;
+	    }
+		if(min.value > 8){
+		  alert("Min Players must be between 2-8");
+		  return false;
+	    }
+		return true;
+	}
+	//function used to reset the search
+	function removeNewTable(){
+	$(".table").remove();
+	$(".img-fluid").show();
+	$("#submit").show();
+	
+	  }
+	//function used to create table based on user parameters
+	function listMaker(newList, type, style, win){
+	$(".tableBegin").append("<table class='table'><thead class='thead'><tr><th scope='col'>Board Game Name</th><th scope='col'>Type</th><th scope='col'>Style</th><th scope='col'>Win Condition</th><th scope='col'>Maximum # of Players</th></tr></thead>").css("font-size","18px");
+	$(".table").append("<tbody><tr><th scope='row'>" + newList[0].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[0].substr(3,1) + "</td>");
+	$(".table").append("<tbody><tr><th scope='row'>" + newList[1].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[1].substr(3,1) + "</td>");
+	$(".table").append("<tbody><tr><th scope='row'>" + newList[2].substr(4) + "</th><td>" + type.value + "</td><td>" + style.value + "</td><td>" + win.value + "</td><td>" + newList[2].substr(3,1) + "</td>");
+	}
+	//function used to filter main list creating a new list based on user input
+	function listFiller(type,style,win,players,fullList){
+	 var newList = [];
+	 var x;
+	 var y;
+	 var z;
+	 var w = players.value;
+	 if(type.value == "coop"){
+	   x = "0";}
+	 else{ 
+	   x = "1";}
+	 if(style.value == "dice-rolling"){
+	   y = "0";}
+	 else{
+	   y = "1";}
+	 if(win.value == "points"){
+	   z = "0";}
+	 else{
+	   z = "1";}
+	 var check = x+y+z;
+	 for(var i =0; i < 25; i++){
+	   if(fullList[i].substr(0,3) == check && fullList[i].substr(3,1) >= w ){
+	     newList.push(fullList[i]);
+		 }
+	 }
+	  return newList;
+	}
+	//function to name variables and create list of games
+	function processList(){
+	  var type = document.getElementById('type');
+	  var sytle = document.getElementById('style');
+	  var win = document.getElementById('win');
+	  var players = document.getElementById('min');
+	  var newList = listFiller(type,style,win,players,fullList);
+	  if(newList[0] == null){
+	    alert ("Your search did not produce any results");
+		return false;
+		}
+	  else{
+	    $("#submit").hide();
+	    $(".img-fluid").hide();
+	    return listMaker(newList, type, style, win);
+	  }
+	}
+	//declared array of board game possibilities
+	var fullList = ["0005Descent Second Edition","0115Big Book of Madness", "0015Mansions of Madness", "0018Zobicide","1104Above & Below", "1105Adenaline", "1005Alien Frontiers","0018Arcadia Quest", "1105BloodRage", "1106Carcassonne","1104City of Iron", "1008Dungeon", "1118Dungeon Quest","1105Empires of the Void", "1105Five Tribes", "0115Forbidden Island","1018Formula D", "0114Hogwarts Battle", "1104Islebound","1105Kemet", "1108Kharnage", "1006King of Tokyo","1105Kingdom Builder", "1104Clank", "1106Lords of Waterdeep"];
+	//function that starts the whole process, once button is clicked
+	function clicked(){
+	if(validateForm() == true){
+	  processList();
+	  }
+	};
+	</script>
+  </body>
+</html>
