@@ -7,7 +7,7 @@ layout: default
 Our first assignment was to learn Git, HTML, CSS, and BootStrap.  Then to make a repository and website that houses all our information including a dummy website showing our basic knowledge of these programs. I was excited by the idea of creating a website and repository, though I had no real experience using any of these programs before. I had to work hard to quickly understand each program and learn what I needed to successfully put together the assignment ask. Some of the things that were helpful in this effort were youtube videos, language reference materials (aka each languages website), and of course Google. 
 
 ## Links
-1. [My Wedbsite](https://avickers17.github.io/CS460/HW1/website)
+1. [My Website](https://avickers17.github.io/cs460/HW1/website)
 2. [Assignment Page](https://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html)
 3. [Code Repository for HW1](https://github.com/avickers17/avickers17.github.io/tree/master/cs460/HW1/website/)
 
