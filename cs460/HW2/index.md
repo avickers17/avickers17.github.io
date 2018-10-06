@@ -7,7 +7,7 @@ layout: default
 Our second assignment was to learn Javascript, JQuery, DOM, and Git Branching.  We were to create a new branch within our repository and learn how to update our branch as well as our master link so that we could eventually merge our git branch and master lists back into the same git list. In essence to help us simulate how to work with others or even ourselves from different locations and eventually merging our final product back into one final repository. In addition, I was excited to learn Javascript and JQuery as this is where we could really start manipulating the content on our webpages using code that is similar to c, c++, and java.  Getting used to the new format of this language was a bit challenging at first, but over time I found myself getting the hang of it quickly and with some additional resources such as the "JQuery Cheat Sheet" (see link below) and youtube videos I was able to get a my search result table up and running successfully.
 
 ## Links
-1. [My Wedbsite - Updated Homepage](https://avickers17.github.io/cs460/HW2/website)
+1. [My Website - Updated Homepage](https://avickers17.github.io/cs460/HW2/website)
 2. [Assignment Page](https://www.wou.edu/~morses/classes/cs46x/assignments/HW2.html)
 3. [Code Repository for HW2](https://github.com/avickers17/avickers17.github.io/tree/master/cs460/HW2/website)
 4. [JQuery Quick API Reference](https://oscarotero.com/jquery/)
