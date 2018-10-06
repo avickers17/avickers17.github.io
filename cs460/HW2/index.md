@@ -9,12 +9,12 @@ Our second assignment was to learn Javascript, JQuery, DOM, and Git Branching.  
 ## Links
 1. [My Wedbsite - Updated Homepage](https://avickers17.github.io/cs460/HW2/website)
 2. [Assignment Page](https://www.wou.edu/~morses/classes/cs46x/assignments/HW2.html)
-3. [Code Repository for HW2](https://github.com/avickers17/avickers17.github.io/tree/master/CS460/HW2/website)
+3. [Code Repository for HW2](https://github.com/avickers17/avickers17.github.io/tree/master/cs460/HW2/website)
 4. [JQuery Quick API Reference](https://oscarotero.com/jquery/)
 
 ## Want to go back?
 * Back to my Homepage: [Homepage](https://avickers17.github.io)
-* Back to my Homework Page: [Homework](https://avickers17.github.io/CS460)
+* Back to my Homework Page: [Homework](https://avickers17.github.io/cs460/)
 
 ### Javascript and JQuery
 Before getting started, we were asked in our assignment to put together a rough sketch of what we were planning on building.  In this way we could plan our design and then design it based on what we had intended to build.  My idea was to take my original website and include a recommended games list based on what the user was looking for.  The search functionality would accept some input from the user via toggle boxes and or typed input and then output a list of recommended games.  I wanted to make sure that my input features were easy to use and clear as to what the search was looking for and how to use it.  I also wanted to make sure that I included error messages in case the user did not find any results or didn't input something correctly.  My initial design sketches were as follows:
