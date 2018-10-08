@@ -4,7 +4,7 @@ layout: default
 ---
 
 ## Homework 2
-Our second assignment was to learn Javascript, JQuery, DOM, and Git Branching.  We were to create a new branch within our repository and learn how to update our branch as well as our master link so that we could eventually merge our git branch and master lists back into the same git list. In essence to help us simulate how to work with others or even ourselves from different locations and eventually merging our final product back into one final repository. In addition, I was excited to learn Javascript and JQuery as this is where we could really start manipulating the content on our webpages using code that is similar to c, c++, and java.  Getting used to the new format of this language was a bit challenging at first, but over time I found myself getting the hang of it quickly and with some additional resources such as the "JQuery Cheat Sheet" (see link below) and youtube videos I was able to get a my search result table up and running successfully.
+Our second assignment was to learn Javascript, JQuery, DOM, and Git Branching.  We were to create a new branch within our repository and learn how to update our branch as well as our master link so that we could eventually merge our git branch and master lists back into the same git list. In essence to help us simulate how to work with others or even ourselves from different locations and eventually merging our final product back into one final repository. In addition, I was excited to learn Javascript and JQuery as this is where we could really start manipulating the content on our webpages using code that is similar to c, c++, and java.  Getting used to the new format of this language was a bit challenging at first, but over time I found myself getting the hang of it quickly and with some additional resources such as the "JQuery Cheat Sheet" (see link below) and youtube videos I was able to get my search result table up and running successfully.
 
 ## Links
 1. [My Website - Updated Homepage](https://avickers17.github.io/cs460/HW2/website)
@@ -17,7 +17,7 @@ Our second assignment was to learn Javascript, JQuery, DOM, and Git Branching.  
 * Back to my Homework Page: [Homework](https://avickers17.github.io/cs460/)
 
 ### Javascript and JQuery
-Before getting started, we were asked in our assignment to put together a rough sketch of what we were planning on building.  In this way we could plan our design and then design it based on what we had intended to build.  My idea was to take my original website and include a recommended games list based on what the user was looking for.  The search functionality would accept some input from the user via toggle boxes and or typed input and then output a list of recommended games.  I wanted to make sure that my input features were easy to use and clear as to what the search was looking for and how to use it.  I also wanted to make sure that I included error messages in case the user did not find any results or didn't input something correctly.  My initial design sketches were as follows:
+Before getting started, we were asked in our assignment to put together a rough sketch of what we were planning on building.  In this way we could plan our design and then design it based on what we had intended to build.  My idea was to take my original website and include a recommended games list based on what the user was looking for.  The search functionality would accept some input from the user via toggle boxes and/or typed input and then output a list of recommended games.  I wanted to make sure that my input features were easy to use and clear as to what the search was looking for and how to use it.  I also wanted to make sure that I included error messages in case the user did not find any results or didn't input something correctly.  My initial design sketches were as follows:
 
 ![Search Mockup](search.png)
 
@@ -85,13 +85,13 @@ function clicked(){
 ```
 
 ### JQuery
-JQuery simplified some of this process by allowing you to target specific items in the DOM classes, id's, or elements on your page in which you could then manipulate those objects, add to them, remove them, hide them from view, etc... JQuery had a very different syntax that I was used to however, so I had to utilize many of the tools that were provided to us including the main JQuery API page as listed above.
-Once I got the hand of both Javascript and JQuery, I used a combination of both to start putting together my search engine.
+JQuery simplified some of this process by allowing you to target specific items in the DOM classes, id's, or elements on your page in which you could then manipulate those objects, add to them, remove them, hide them from view, etc... JQuery had a very different syntax than I was used to however, so I had to utilize many of the tools that were provided to us including the main JQuery API page as listed above.
+Once I got the hang of both Javascript and JQuery, I used a combination of both to start putting together my search engine.
 
 The button fuction above was the initializer that made all of my coding work.
 
 #### Input Validation
-First the button would check for form validation, in this case to make sure that the user entered in a value that was required and within the limits of the range that I specified, in this case 2-8 was the range that I was looking for.
+First the button would check for form validation, in this case to make sure that the user entered in a value that was required and within the limits of the range that I specified, 2-8 was the range that I was looking for.
 ```Javascript
 function validateForm(){
 	    var min = document.getElementById('min')
@@ -153,7 +153,7 @@ To wrap up the search, I included a reset button.  This was made for two reasons
 	  }
 ```
 #### Search Engine Complete
-With my search engine complete, adding additional games to my list or increasing the output of the search criteria would be easy edits as I had created a serial code that could be used for any addition that I wanted to add.  To save room on the page, I could also include a seperate file that housed this information, however I chose not to for the time being to keep things simple.  These are edits I will consider as my website continues to evolve.
+With my search engine complete, adding additional games to my list or increasing the output of the search criteria would be easy edits as I had created a serial code that could be used for any games that I wanted to add.  To save room on the page, I could also include a seperate file that housed this information, however I chose not to for the time being to keep things simple.  These are edits I will consider as my website continues to evolve.
 
 ![Finished Product](example.png)
 
