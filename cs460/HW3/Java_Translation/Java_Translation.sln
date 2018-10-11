@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javacode_Translation", "Javacode_Translation\Javacode_Translation.csproj", "{9596238C-BA3F-459A-A71B-CDE456892651}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Java_Translation", "Java_Translation\Java_Translation.csproj", "{4EB1C5E7-35B2-484E-88E3-2CAF81E28AB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9596238C-BA3F-459A-A71B-CDE456892651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9596238C-BA3F-459A-A71B-CDE456892651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9596238C-BA3F-459A-A71B-CDE456892651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9596238C-BA3F-459A-A71B-CDE456892651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB1C5E7-35B2-484E-88E3-2CAF81E28AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB1C5E7-35B2-484E-88E3-2CAF81E28AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB1C5E7-35B2-484E-88E3-2CAF81E28AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB1C5E7-35B2-484E-88E3-2CAF81E28AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5E283D42-CA21-4B44-B727-0EA8AB9739DF}
+		SolutionGuid = {E8487039-4E8D-4D5B-A1BF-2D0A763CF3D3}
 	EndGlobalSection
 EndGlobal

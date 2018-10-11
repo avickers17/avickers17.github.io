@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Javacode_Translation
+namespace Java_Translation
 {
     /// <summary>
     /// Singly linked node class.  Stores data and a reference to the next node in a potential list.
@@ -12,8 +12,8 @@ namespace Javacode_Translation
 
         public Node(T data, Node<T> next)
         {
-        this.data = data;
-        this.next = next;
+            this.data = data;
+            this.next = next;
         }
     }
 }

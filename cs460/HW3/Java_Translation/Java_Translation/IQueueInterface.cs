@@ -1,8 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Javacode_Translation
+namespace Java_Translation
 {
     /// <summary>
     /// A First in First Out queue interface.  This ADT is suitable for a singly

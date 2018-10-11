@@ -4,7 +4,7 @@ using System.Text;
 
 
 
-namespace Javacode_Translation
+namespace Java_Translation
 {/// <summary>
 /// Original by Sumit Ghosh "An Interesting Method to Generate Binary Numbers from 1 to n"
 /// at https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/
@@ -67,15 +67,15 @@ namespace Javacode_Translation
         }
         //Main program that runs function and checks for input error from user
         static void Main(string[] args)
-		{
+        {
             //Initialize int n
             int n = 10;
             //Check to make sure user provided argument
-            if(args.Length < 1)
+            if (args.Length < 1)
             {
                 //If user did not provide argument, return error message
                 Console.WriteLine("Please invoke with the max value to print binary up to, like this:");
-                Console.WriteLine("Main 12");
+                Console.WriteLine("Main.exe 12");
             }
             try
             {
@@ -96,16 +96,16 @@ namespace Javacode_Translation
 
             //Loop that cycles through output list and ends when reaches the last string in the list
             foreach (string s in output)
-              {
+            {
                 //Inside Loop for adding space before the shorter strings in output to add a clean output look to the user  
-              for (int i = 0; i < maxLength - s.Length; ++i)
+                for (int i = 0; i < maxLength - s.Length; ++i)
                 {
-                Console.Write(" ");
+                    Console.Write(" ");
                 }
-              Console.WriteLine(s);
-              }
+                Console.WriteLine(s);
+            }
             //Keeps console open for user to view until enter is pressed.
             Console.Read();
-		}
-	}
+        }
+    }
 }

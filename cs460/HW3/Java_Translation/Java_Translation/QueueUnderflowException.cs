@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Javacode_Translation
+namespace Java_Translation
 {
     /// <summary>
     /// A custom unchecked exception to represent situations where an illegal operation was performed on an empty queue.
