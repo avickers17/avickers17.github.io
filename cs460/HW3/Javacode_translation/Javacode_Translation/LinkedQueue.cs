@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Javacode_Translation
-{
+{/// <summary>
+/// A Singly Linked First in First Out Queue.  
+///From Dale, Joyce and Weems "Object-Oriented Data Structures Using Java"
+///Modified for CS 460 HW#3 and for Using with C#
+///See IQueueInterface.cs for documentation
+/// </summary>
+/// <typeparam name="T">Type T allows for any type to be stored within the list</typeparam>
     class LinkedQueue<T>
     {
         private Node<T> front;

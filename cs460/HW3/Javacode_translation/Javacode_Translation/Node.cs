@@ -1,6 +1,10 @@
 ﻿using System;
 namespace Javacode_Translation
 {
+    /// <summary>
+    /// Singly linked node class.  Stores data and a reference to the next node in a potential list.
+    /// </summary>
+    /// <typeparam name="T">Type T allows for any type to be stored within the list</typeparam>
     public class Node<T>
     {
         public T data;
