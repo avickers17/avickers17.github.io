@@ -39,7 +39,7 @@ namespace Javacode_Translation
             if(args.Length < 1)
             {
                 Console.WriteLine("Please invoke with the max value to print binary up to, like this:");
-                Console.WriteLine("");
+                Console.WriteLine("Main 12");
             }
             try
             {
@@ -52,18 +52,17 @@ namespace Javacode_Translation
             }
             LinkedList<String> output = Program.GenerateBinaryList(n);
 
-            int maxLength = output.Count;
+            int maxLength = output.Last.Value.Length;
 
             foreach (String s in output)
-            {
-                for (int i = 0; i < maxLength - s.Length; ++i)
+              {
+              for (int i = 0; i < maxLength - s.Length; ++i)
                 {
-                    Console.Write(" ");
+                Console.Write(" ");
                 }
-                Console.WriteLine(s);
-            }
-
-
+              Console.WriteLine(s);
+              }
+            
             Console.Read();
 		}
 	}

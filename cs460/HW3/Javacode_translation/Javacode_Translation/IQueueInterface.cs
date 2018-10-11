@@ -7,7 +7,7 @@ namespace Javacode_Translation
     interface IQueueInterface<T>
     {
         T Push(T element);
-        T Pop(); //till need throw???
+        T Pop();
         Boolean IsEmpty();
     }
 }
