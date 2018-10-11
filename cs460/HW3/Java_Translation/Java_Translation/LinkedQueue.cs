@@ -34,7 +34,7 @@ namespace Java_Translation
             else
             {
                 Node<T> tmp = new Node<T>(element, null);
-                rear.next = tmp;
+                rear.Next = tmp;
                 rear = tmp;
             }
             return element;
@@ -49,14 +49,14 @@ namespace Java_Translation
             }
             else if (front == rear)
             {
-                tmp = front.data;
+                tmp = front.Data;
                 front = null;
                 rear = null;
             }
             else
             {
-                tmp = front.data;
-                front = front.next;
+                tmp = front.Data;
+                front = front.Next;
             }
             return tmp;
         }
