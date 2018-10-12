@@ -153,4 +153,5 @@ static void Main(string[] args)
 Learning to translate one language that I was unfamiliar with to a language that I was learning was no easy task.  But I did my research, watched some educational videos, and pushed through.  I feel like I actually have a better understanding of both languages at this point and hopefully followed all of the necessary conventions.  At this point, I know how to generally code in c#, so my plan is to continue on learning new functionality and conventions as needed so that my coding skills will not only improve in this language, but any language that I attempt to learn as a programmer.
 
 When all was said and done with this program, my output worked as designed.  An example of this is shown below:
+
 ![Output](output.png)
