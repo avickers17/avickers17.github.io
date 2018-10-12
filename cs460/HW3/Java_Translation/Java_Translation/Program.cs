@@ -75,7 +75,7 @@ namespace Java_Translation
             {
                 //If user did not provide argument, return error message
                 Console.WriteLine("Please invoke with the max value to print binary up to, like this:");
-                Console.WriteLine("Main.exe 12");
+                Console.WriteLine("Java_Translation.exe 12");
             }
             try
             {
