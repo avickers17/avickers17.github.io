@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Converter";
 }
+@*Basic page layout form for user input, text field and radio buttons*@
     <h1>Convert Miles to Metric</h1>
     <div class="row">
         <div class="col-md-6">
@@ -11,6 +12,7 @@
                     <br>
                     <input class="userInput" type="number" step="0.01" name="miles" required>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    @*Message will show if it has been updated by the functions in the Updated GET Request*@
                     <h4 class="special_message">@ViewBag.message</h4>
 </div>
         <div class="col-md-6">
