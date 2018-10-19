@@ -7,6 +7,7 @@ Thank you!
 ### Contact Information
 * Email: avickers17@mail.wou.edu
 * [Github](https://github.com/avickers17)
+* [Linkedin] (https://www.linkedin.com/in/adrian-vickers-21757b87/)
 
 ### Code Repository
 * [Repository](https://github.com/avickers17/avickers17.github.io)
