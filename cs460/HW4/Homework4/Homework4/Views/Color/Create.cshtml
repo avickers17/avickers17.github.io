@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create a New Color</h2>
+<h4>Please enter colors in HTML hexadecimal format: #AABBCC</h4>
+<div class="row">
+    <div class="col-sm-6">
+        @using (Html.BeginForm("Create", "Color", FormMethod.Post, new { id = 0, @class = "my form" }))
+        {
+            @Html.Label("Color", "First Color")
+            @Html.TextBox("ColorA", null, htmlAttributes: new { @class = "form-control", required = "required", pattern = "#[0-9A-fa-f]{3,6}"})
+            @Html.Label("Color", "Second Color")
+            @Html.TextBox("ColorB", null, htmlAttributes: new { @class = "form-control", required = "required", pattern = "#[0-9A-fa-f]{3,6}"})
+            <br />
+            <input class="btn btn-primary btn-lg" type="submit" value="Mix Colors" />
+}
+        @if (ViewBag.show == true)
+        {
+            <br /> <br /> <br />
+            <div class="row">
+                <div class="col-sm-4" style="@ViewBag.item1"></div>
+                <div class="col-sm-4" style="width:40px; height: 80px;"><h3>+</h3></div>
+                <div class="col-sm-4" style="@ViewBag.item3"></div>
+                <div class="col-sm-4" style="width:40px; height: 80px;"><h3>=</h3></div>
+                <div class="col-sm-4" style="@ViewBag.item5"></div>
+            </div>
+        }
+    </div>
+</div>
