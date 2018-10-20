@@ -84,7 +84,7 @@ Example of creating the return string in the controller:
 ```
 
 ### Create a New Color (View and Controller Updates using GET/POST)
-For this section, we had to create two methods within the controller.  One that simply showed a basic page layout that would ask the user for input to create a color using hexadecimal form. This initial view was a method in the controller that would simply show the basic page and hide some additional Viewbag information.  Once the user put in their input (I created user validation in html that required that the user entered a specific hex format.  I required this by creating a regular expression format: pattern = "#[0-9A-fa-f]{3,6}"} which was an attribute of the text field) they would be presented with boxes that showed their two colors and returned a mix of the two colors chosen.  For the view page, we had to creat these html user fields by using RAZOR helpers. 
+For this section, we had to create two methods within the controller.  One that simply showed a basic page layout that would ask the user for input to create a color using hexadecimal form. This initial view was a method in the controller that would simply show the basic page and hide some additional Viewbag information.  Once the user put in their input (I created user validation in html that required that the user entered a specific hex format.  I required this by creating a regular expression format: pattern = "#^[0-9A-fa-f]{6}|[0-9A-fa-f]{3}$"} which was an attribute of the text field) they would be presented with boxes that showed their two colors and returned a mix of the two colors chosen.  For the view page, we had to creat these html user fields by using RAZOR helpers. 
 
 Example of RAZOR helpers:
 ```cs
