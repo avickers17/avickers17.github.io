@@ -1,0 +1,75 @@
+﻿@model Homework5.Models.Tennant
+
+@{
+    ViewBag.Title = "CreateForm";
+}
+
+<h2 class="form_title">Campus Apartments</h2>
+<br />
+<h4 class="form_title">Tennant Request Form</h4>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", pattern = "^[0-9]{3}-[0-9]{3}-[0-9]{4}$" }})
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "Please enter Phone Number as per this format: 999-999-9999", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-8">
+                    @Html.LabelFor(model => model.ApartmentName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(model => model.ApartmentName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ApartmentName, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-4">
+                    @Html.LabelFor(model => model.UnitNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(model => model.UnitNumber, new { htmlAttributes = new { @class = "form-control", required = "required", pattern = "^[0-9]{2}$" } })
+                    @Html.ValidationMessageFor(model => model.UnitNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+         </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form">
+                        <textarea placeholder="Explaination of request, maintence required, or complaint.  Please be specific."
+                                  rows="10" cols="100" style="overflow:scroll;"></textarea>
+                    </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-4">
+                    <input class="btn btn-primary" type="submit" value="Submit Request" />
+                </div>
+                <div class="col-sm-8">
+                    <input type="checkbox" id="permission" value="0" /><lable for="permission" required="required">
+                            Select here to give permission for the landlord or
+                            representative to enter your unit to perform the requested mainenance.  We will call first.
+                        </lable>
+                </div>
+            </div>
+        </div>
+        }

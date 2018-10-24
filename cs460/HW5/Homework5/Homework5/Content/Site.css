@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.form_title{
+    text-align: center;
+}
+
+input.wide-control{
+    width: 300px;
+}
+
+

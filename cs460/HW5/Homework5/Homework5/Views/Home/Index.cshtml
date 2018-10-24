@@ -1,32 +1,27 @@
-﻿@{
+﻿
+
+@{
     ViewBag.Title = "Home Page";
 }
 @*Updated home page based on homework details and requirements*@
 <div class="jumbotron">
     <h1>CS 460 Homework 5</h1>
     <p class="lead">
-        a MVC web application that uses a simple one-table local database
+        A MVC web application that uses a simple one-table local database
     </p>
-    <p><a href="http://localhost:50009/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-
+    <p><a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-
 <div class="row">
     <div class="col-md-6">
-        <h2>Mile to Metric Converter</h2>
+        <h2></h2>
         <p>
-            Want to know how many millimeters there are in 26.2 miles?  This calculator is for you.  Uses query strings to send form data to the server,
-            which performs the calculation and returns the answer in the requested page.
         </p>
-        <p><a class="btn btn-primary btn-lg" href="http://localhost:52737/Home/Converter">Try it out &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="@Url.Action("CreateForm", "Form")">Try it out &raquo;</a></p>
     </div>
     <div class="col-md-6">
-        <h2>Color Chooser</h2>
+        <h2></h2>
         <p>
-            Typical online color choosers are way too useful.  We wanted something fun and completely useless.  This form
-            POST's the data to the server.
         </p>
-        <p><a class="btn btn-primary btn-lg" href="http://localhost:52737/Color/Create">Check it out &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Color")">Check it out &raquo;</a></p>
     </div>
 </div>
-
