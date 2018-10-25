@@ -29,17 +29,16 @@
             </div>
             <div class="col-sm-4">
                 @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", pattern = "^[0-9]{3}-[0-9]{3}-[0-9]{4}$" }})
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", pattern = "^[0-9]{3}-[0-9]{3}-[0-9]{4}$" } })
                 @Html.ValidationMessageFor(model => model.PhoneNumber, "Please enter Phone Number as per this format: 999-999-9999", new { @class = "text-danger" })
             </div>
         </div>
-        <br />
         <br />
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-8">
                     @Html.LabelFor(model => model.ApartmentName, htmlAttributes: new { @class = "control-label col-md-2" })
-                    @Html.EditorFor(model => model.ApartmentName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.ApartmentName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
                     @Html.ValidationMessageFor(model => model.ApartmentName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-sm-4">
@@ -54,22 +53,22 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="form">
-                        <textarea placeholder="Explaination of request, maintence required, or complaint.  Please be specific."
-                                  rows="10" cols="100" style="overflow:scroll;"></textarea>
+                        @Html.TextBoxFor(model => model.TextBox, new { htmlAttributes = new { @class = "form-control", required = "required", style = "width: 100px" } })
                     </div>
+                </div>
             </div>
             <br />
             <br />
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
+                    <br />
                     <input class="btn btn-primary" type="submit" value="Submit Request" />
                 </div>
-                <div class="col-sm-8">
-                    <input type="checkbox" id="permission" value="0" /><lable for="permission" required="required">
-                            Select here to give permission for the landlord or
-                            representative to enter your unit to perform the requested mainenance.  We will call first.
-                        </lable>
-                </div>
+                <div class="col-sm-6">
+                    @*@Html.CheckBoxFor(model => model.CheckBox, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.LabelFor(model => model.CheckBox, "Select here to give permission for the landlord or " +
+                  "representative to enter your unit to perform the requested mainenance.We will call first.", htmlAttributes: new { @class = "control-label col-md-2" })
+                *@</div>
             </div>
         </div>
         }

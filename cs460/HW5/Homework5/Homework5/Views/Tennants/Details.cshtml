@@ -1,0 +1,82 @@
+﻿@model Homework5.Models.Tennant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tennant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TextBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VerifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VerifiedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -8,6 +8,9 @@ namespace Homework5.Models
 {
     public class Tennant
     {
+        [Key]
+        public int ID { get; set; }
+
         [Display(Name= "First Name:"), Required(ErrorMessage = "Name must be at least 3 characters long")]
         [StringLength(30)]
         public string FirstName { get; set; }
@@ -25,12 +28,21 @@ namespace Homework5.Models
         public string ApartmentName {get; set; }
 
         [Display(Name = "Unit Number:"), Required]
-        [MaxLength(2)]
-        [MinLength(2)]
         public int UnitNumber { get; set; }
 
         [Required]
         public string TextBox { get; set; }
+
+        [Required]
+        public bool CheckBox { get; set; }
+
+        private DateTime date = DateTime.Now;
+
+        public DateTime VerifiedDate
+        {
+            get { return date; }
+            set { date = value; }
+        }
 
     }
 

@@ -12,13 +12,13 @@ namespace Homework5.Controllers
         [HttpGet]
         public ActionResult CreateForm()
         {
-            return View(check);
+            return View();
         }
 
-        [HttpPost]
-        public ActionResult CreateForm([Bind(Include = "FirstName, LastName, PhoneNumber, ApartmentName, UnitNumber, TextBox"
-        {
+        //[HttpPost]
+        //public ActionResult CreateForm([Bind(Include = "FirstName, LastName, PhoneNumber, ApartmentName, UnitNumber, TextBox"
+        //{
 
-        }
+        //}
     }
 }
