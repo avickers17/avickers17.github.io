@@ -8,6 +8,7 @@ namespace Homework5.Models
 {
     public class Tennant
     {
+        //tennant class to be used within the db and for get/post requests
         [Key]
         public int ID { get; set; }
 
@@ -36,12 +37,13 @@ namespace Homework5.Models
 
         public bool CheckBox { get; set; }
 
-        private DateTime date = DateTime.Now;
+        private DateTime Date = DateTime.Now;
 
+        //DerifiedDate set by date class to set when the tennant class has been created
         public DateTime VerifiedDate
         {
-            get { return date; }
-            set { date = value; }
+            get { return Date; }
+            set { Date = value; }
         }
 
     }

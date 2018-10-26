@@ -1,5 +1,4 @@
 ﻿--Forms Table
---Forms Table
 CREATE TABLE [dbo].[Tennants]
 (
 	[ID] INT IDENTITY (1,1) NOT NULL,

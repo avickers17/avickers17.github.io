@@ -16,6 +16,6 @@ Thank you!
 * [HW Link](https://avickers17.github.io/cs460/)
 
 ## More To Come:
-Keep an eye out on this page for freaquent updates and information showcasing my current works!  I appreciate you visiting my page!
+Keep an eye out on this page for frequent updates and information showcasing my current works!  I appreciate you visiting my page!
 
 

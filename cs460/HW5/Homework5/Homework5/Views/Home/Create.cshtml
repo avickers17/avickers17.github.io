@@ -8,7 +8,7 @@
 <br />
 <h4 class="form_title">Tennant Request Form</h4>
 <br />
-
+@*Form information used for the create get/post requests*@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -77,7 +77,7 @@
             </div>
         </div>
         }
-
+        @*Link to return back to the formlist page*@
         <div>
             @Html.ActionLink("Back to List", "FormsList")
         </div>
