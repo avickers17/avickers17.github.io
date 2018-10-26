@@ -12,7 +12,7 @@ namespace Homework5.Models
         public int ID { get; set; }
 
         [Display(Name= "First Name:"), Required(ErrorMessage = "Name must be at least 3 characters long")]
-        [StringLength(30)]
+        [StringLength(30, MinimumLength = 3)]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name:"), Required]
@@ -20,20 +20,20 @@ namespace Homework5.Models
         public string LastName { get; set; }
 
         [Display(Name = "Phone Number:"), Required]
-        [RegularExpression("^[0-9]{3}-[0-9]{3}-[0-9]{4}$", ErrorMessage = "Enter Phone Number like 999-999-9999")]
+        [RegularExpression("^[0-9]{3}-[0-9]{3}-[0-9]{4}$", ErrorMessage = "Enter Phone Number in the format of: 999-999-9999")]
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Apartment Name:"), Required]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Name must be at least 3 characters long")]
+        [StringLength(30, ErrorMessage = "Name must be at least 3 characters long")]
         public string ApartmentName {get; set; }
 
         [Display(Name = "Unit Number:"), Required]
+        [RegularExpression("^[0-9]{2}$", ErrorMessage = "Enter A One-Two Digit Number")]
         public int UnitNumber { get; set; }
 
         [Required]
         public string TextBox { get; set; }
 
-        [Required]
         public bool CheckBox { get; set; }
 
         private DateTime date = DateTime.Now;

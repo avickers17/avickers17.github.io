@@ -1,4 +1,5 @@
 ﻿--Forms Table
+--Forms Table
 CREATE TABLE [dbo].[Tennants]
 (
 	[ID] INT IDENTITY (1,1) NOT NULL,
@@ -15,7 +16,9 @@ CREATE TABLE [dbo].[Tennants]
 	);
 
 	INSERT INTO [dbo].[Tennants] (FirstName, LastName, PhoneNumber, ApartmentName, UnitNumber, TextBox, CheckBox, VerifiedDate) VALUES
-		('Jon','Jonny','888-888-8888', 'Building A', 10, 'Help with Faucet', 1, '2018-2-13'),
-		('Kim','Kimberly','777-777-7777', 'Building C', 9, 'Help with Faucet', 1, '2018-3-14'),
-		('Alice','Alison','555-555-5555', 'Building F', 8, 'Help with Faucet', 1, '2018-4-12')
+		('Jon','Jonny','888-888-8888', 'Building A', 21, 'Help with faucet', 1, '2018-10-13'),
+		('Kim','Kimberly','777-777-7777', 'Building C', 10, 'Broken shower head', 1, '2018-7-14'),
+		('Alice','Alison','555-555-5555', 'Building F', 19, 'Closet door busted', 0, '2018-4-12'),
+		('Bev','Beverly','999-999-9999','Building B', 33,'Doorknob fell off', 0, '2018-5-11'),
+		('Carl','Carlson','222-222-2222','Building A', 17,'Broken sink', 1, '2018-6-10')
 		GO

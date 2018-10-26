@@ -153,7 +153,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TennantsController.cs" />
     <Compile Include="DAL\FormsContext.cs" />
@@ -164,6 +163,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Down.sql" />
     <Content Include="App_Data\FormData.mdf" />
     <Content Include="App_Data\FormData_log.ldf">
       <DependentUpon>FormData.mdf</DependentUpon>
@@ -205,14 +205,17 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Form\CreateForm.cshtml" />
     <Content Include="Views\Tennants\Create.cshtml" />
     <Content Include="Views\Tennants\Delete.cshtml" />
     <Content Include="Views\Tennants\Details.cshtml" />
     <Content Include="Views\Tennants\Edit.cshtml" />
     <Content Include="Views\Tennants\Index.cshtml" />
+    <Content Include="Views\Home\FormsList.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Form\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

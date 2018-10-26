@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Homework5.Models.Tennant>
+
+@{
+    ViewBag.Title = "FormsList";
+}
+
+<h2>Tennant Request List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="megaTable">
+    <tr>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.ApartmentName)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.UnitNumber)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.TextBox)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.CheckBox)
+        </th>
+        <th id="theader">
+            @Html.DisplayNameFor(model => model.VerifiedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TextBox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckBox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VerifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

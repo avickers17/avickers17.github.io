@@ -1,0 +1,83 @@
+﻿@model Homework5.Models.Tennant
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="form_title">Campus Apartments</h2>
+<br />
+<h4 class="form_title">Tennant Request Form</h4>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-8">
+                @Html.LabelFor(model => model.ApartmentName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.ApartmentName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ApartmentName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.UnitNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.UnitNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UnitNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.TextAreaFor(model => model.TextBox, new { @class = "form-control", @rows = 10,
+                    placeholder = "Explanation of request, maintenance required or complaint.Please be specific."})
+                    @Html.ValidationMessageFor(model => model.TextBox, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.CheckBox)
+                        @Html.LabelFor(model => model.CheckBox, "Select here to give permission for the landlord or " +
+                        "representative to enter your unit to perform the requested mainenance.We will call first.", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.ValidationMessageFor(model => model.CheckBox, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "FormsList")
+        </div>
