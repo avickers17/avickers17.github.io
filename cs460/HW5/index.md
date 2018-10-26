@@ -21,7 +21,7 @@ Example below of the SQL Sytax for Creating the Table and Inserting Items:
 ![Up](up.png)
 
 Example of Setting up the link in our Web_Config file:
-![Web](web.png)
+![Web](Web.png)
 
 ### Model Class and Database Context Class
 Next we had to create classes that would be the foundation for accessing our database.  Specifically I created a Tennant class that included all of the information needed for a tennent to fill out necessary information required for the form.  Within the class, we were shown how to set required fields that would be enforced vs. within our HTML view page.  This new process seemed more efficient as rules could be set and efforced as we were building the class.  Subsequently these rules were easier to access and view all in one place.
