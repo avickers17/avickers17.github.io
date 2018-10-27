@@ -32,14 +32,16 @@ namespace Homework5.Models
         [RegularExpression("^[0-9]{2}$", ErrorMessage = "Enter A One-Two Digit Number")]
         public int UnitNumber { get; set; }
 
-        [Required]
+        [Display(Name = "Request Details:"), Required]
         public string TextBox { get; set; }
 
+        [Display(Name = "Entry Permission:")]
         public bool CheckBox { get; set; }
 
         private DateTime Date = DateTime.Now;
 
-        //DerifiedDate set by date class to set when the tennant class has been created
+        //VerifiedDate set by date class to set when the tennant class has been created
+        [Display(Name = "Submission Date:")]
         public DateTime VerifiedDate
         {
             get { return Date; }
