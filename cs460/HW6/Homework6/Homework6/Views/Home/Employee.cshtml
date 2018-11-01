@@ -1,0 +1,16 @@
+﻿@model Homework6.Models.Person
+@{
+    ViewBag.Title = "Employee";
+}
+<div class="container-fluid">
+    <img src="@Url.Content("~/Content/Images/Logo.png")" />
+</div>
+<div class="Container">
+    <div class="col-sm-6">
+        <div class="box-1">
+            <h1>@Html.DisplayFor(model => model.FullName)</h1>
+        </div>
+    </div>
+</div>
+
+
