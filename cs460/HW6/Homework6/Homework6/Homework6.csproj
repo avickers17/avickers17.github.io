@@ -249,7 +249,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
-    <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Employee.cshtml" />
   </ItemGroup>
   <ItemGroup>
