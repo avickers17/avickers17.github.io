@@ -1,16 +1,180 @@
-﻿@model Homework6.Models.Person
+﻿@model Homework6.Models.ViewModels.PersonDashBoardVM
 @{
+    /**/
+
     ViewBag.Title = "Employee";
 }
-<div class="container-fluid">
+<div class="row">
     <img src="@Url.Content("~/Content/Images/Logo.png")" />
 </div>
-<div class="Container">
+<br />
+<br />
+<div class="row">
     <div class="col-sm-6">
         <div class="box-1">
-            <h1>@Html.DisplayFor(model => model.FullName)</h1>
+            <h2 id="special-header" style="color:brown">@Html.DisplayFor(model => model.Person.FullName)</h2>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    <p>Preferred Name: </p>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Person.PreferredName)
+                </dd>
+                <dt>
+                    <p>Phone: </p>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Person.PhoneNumber)
+                </dd>
+                <dt>
+                    <p>Fax: </p>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Person.FaxNumber)
+                </dd>
+                <dt>
+                    <p>Email: </p>
+                </dt>
+                <dd>
+                    <a href="@Model.Person.EmailAddress">@Html.DisplayFor(model => model.Person.EmailAddress)</a>
+                </dd>
+                <dt>
+                    <p>Member Since: </p>
+                </dt>
+                <dd>
+                    @string.Format("{0:MM/yyyy}",Convert.ToDateTime(Html.DisplayFor(model => model.Person.ValidFrom).ToString()))
+                </dd>
+            </dl>
         </div>
     </div>
-</div>
 
+
+    <div class="col-sm-6">
+        <img src="@Url.Content("~/Content/Images/Photo.png")" />
+    </div>
+</div>
+<br />
+@if (ViewBag.Check)
+{
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="box-1">
+                <h2 id="special-header">Company Profile</h2>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        <p>Company: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Customer.CustomerName)
+                    </dd>
+                    <dt>
+                        <p>Phone: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Customer.PhoneNumber)
+                    </dd>
+                    <dt>
+                        <p>Fax: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Customer.FaxNumber)
+                    </dd>
+                    <dt>
+                        <p>Email: </p>
+                    </dt>
+                    <dd>
+                        <a href="@(Model.Customer.WebsiteURL)">@Html.DisplayFor(model => model.Customer.WebsiteURL)</a>
+                    </dd>
+                    <dt>
+                        <p>Member Since: </p>
+                    </dt>
+                    <dd>
+                        @string.Format("{0:MM/yyyy}", Convert.ToDateTime(Html.DisplayFor(model => model.Customer.ValidFrom).ToString()))
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="box-1">
+                <h2 id="special-header">Purchase History Summary</h2>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        <p>Orders: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.OrderTotal)
+                    </dd>
+                    <dt>
+                        <p>Gross Sales: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.GrossSales)
+                    </dd>
+                    <dt>
+                        <p>Gross Profit: </p>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.GrossProfit)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="box-1">
+                <h2 id="special-header">Items Purchased</h2> 
+                <p style="text-align:center; color:brown;">(10 Highest by Profit)</p>
+                <hr />
+                <table class="table">
+                    <tr>
+                        <th id="theader">
+                            @Html.DisplayNameFor(model => model.InvoiceLines.FirstOrDefault().StockItemID)
+                        </th>
+                        <th id="theader">
+                            @Html.DisplayNameFor(model => model.InvoiceLines.FirstOrDefault().Description)
+                        </th>
+                        <th id="theader">
+                            @Html.DisplayNameFor(model => model.InvoiceLines.FirstOrDefault().LineProfit)
+                        </th>
+                        <th id="theader">
+                            <p>Sales Person</p>
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.InvoiceLines)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StockItemID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @string.Format("{0:C}", item.LineProfit)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Invoice.Person4.FullName)
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+            </div>
+            </div>
+        </div>
+}
 

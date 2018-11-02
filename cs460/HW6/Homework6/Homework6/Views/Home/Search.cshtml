@@ -1,18 +1,17 @@
 ﻿@model IEnumerable<Homework6.Models.Person>
 @{
-    /**/
 
-    ViewBag.Title = "Search";
+   ViewBag.Title = "Search";
 }
-<div class="container-fluid">
+<div class="row">
     <img src="@Url.Content("~/Content/Images/Logo.png")" />
 </div>
-<h3 class="form-title" id="searchEngine" style="text-align:center">Client Search</h3>
+<h3 class="form-title" id="searchEngine">Client Search</h3>
 <hr />
 <form action="search" method="get">
     <div class="row">
         <div class="col-sm-8">
-            @Html.EditorFor(model => model.FirstOrDefault().FullName, new { htmlAttributes = new { @class = "form-control", placeholder = "Search by Client Name" } })
+            @Html.EditorFor(model => model.FirstOrDefault().FullName, new { htmlAttributes = new { @class = "form-control", placeholder = "Search by Client Name" }})
         </div>
         <div class="col-sm-4">
             <input type="submit" value="Search" class="btn btn-default" />
@@ -20,14 +19,12 @@
     </div>
 </form>
 <br />
-<h4>@ViewBag.message</h4>
+<p>@ViewBag.message</p>
 @foreach (var item in Model)
 {
-    <tr>
-        <td>
-            <a class="btn btn-default" href="@Url.Action("Employee", "Home", new { id=item.PersonID })">@Html.DisplayFor(modelItem => item.FullName)</a>
-        </td>
-    </tr>
+<div class="row">
+    <a class="btn btn-default" style="background-color:aliceblue" href="@Url.Action("Employee", "Home", new { id=item.PersonID })">@Html.DisplayFor(modelItem => item.FullName)</a>
+</div>
 }
 
 
