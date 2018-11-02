@@ -25,7 +25,7 @@ Example LINQPad 5 Query:
 Now with the database connected, we were able to have MVC 5 put together Classes/Models from each of the tables within the database allowing us to use these classes within our controllers and views. Then we had to move the DBContext class to its correct location within the DAL folder.   
 
 Example Model/Class Autocreated by MVC 5:
-![Model](Model.png)
+![Model](Models.png)
 
 ### Content/Coding (People Search)
 With the setup complete, it was time to start putting together the search page.  I started with the view page for searching, putting together the text field, button and returned results formating.  Then I had to contruct the controller that returned my view.  This view would changed based on the search results, either returning no results, 1 result, or many results listing customers/employees who's names included the search criteria.  Some examples of this code is show below:
@@ -200,8 +200,8 @@ Purchases:
 Results View for Customer:
 ![Customer](Customer.png)
 
-###Video Demo
+### Video Demo
 To Wrap it all up, we were asked to create a demo video showing our work.  Above you can find a link to that demo.
 
-###Conclusion
+### Conclusion
 Working with a large scale database and Linq queries was challenging, but really exciting once I started understanding how to utilize them more effectively.  Going forward I am excited at the idea of being able to traverse a real live database, utilizing actual data to complete coding tasks, and presenting this data in a clean and concise fashion. 
