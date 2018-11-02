@@ -12,6 +12,7 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="box-1">
+            @*Display basic Information for the person searched whether be a customer or employee*@
             <h2 id="special-header" style="color:brown">@Html.DisplayFor(model => model.Person.FullName)</h2>
             <hr />
             <dl class="dl-horizontal">
@@ -48,18 +49,19 @@
             </dl>
         </div>
     </div>
-
-
+    @*Place holder picture for potential pics in the future*@
     <div class="col-sm-6">
         <img src="@Url.Content("~/Content/Images/Photo.png")" />
     </div>
 </div>
 <br />
+@*If the viewbag.check = true, this means that the person is a customer, more information is shown*@
 @if (ViewBag.Check)
 {
     <div class="row">
         <div class="col-sm-6">
             <div class="box-1">
+                @*Display Company Information*@
                 <h2 id="special-header">Company Profile</h2>
                 <hr />
                 <dl class="dl-horizontal">
@@ -103,6 +105,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="box-1">
+                @*Display Company Purchase Totals/History*@
                 <h2 id="special-header">Purchase History Summary</h2>
                 <hr />
                 <dl class="dl-horizontal">
@@ -134,6 +137,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="box-1">
+                @*Display a list of top ten most profitable items purchase by customer*@
                 <h2 id="special-header">Items Purchased</h2> 
                 <p style="text-align:center; color:brown;">(10 Highest by Profit)</p>
                 <hr />
@@ -172,7 +176,6 @@
                         </tr>
                     }
                 </table>
-
             </div>
             </div>
         </div>

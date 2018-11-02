@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Homework6.Models.ViewModels
 {
+    //PersonDashBoard Class needed for View when returning multiple objects
     public class PersonDashBoardVM
     {
         public Person Person { get; set; }
@@ -24,8 +25,6 @@ namespace Homework6.Models.ViewModels
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal GrossProfit { get; set; }
 
-
     }
-
     
 }

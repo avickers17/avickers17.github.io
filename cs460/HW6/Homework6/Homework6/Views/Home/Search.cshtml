@@ -11,6 +11,7 @@
 <form action="search" method="get">
     <div class="row">
         <div class="col-sm-8">
+            @*Input area for search*@
             @Html.EditorFor(model => model.FirstOrDefault().FullName, new { htmlAttributes = new { @class = "form-control", placeholder = "Search by Client Name" }})
         </div>
         <div class="col-sm-4">
@@ -19,9 +20,11 @@
     </div>
 </form>
 <br />
+@*Searh Results return results message and a potential list of people in the form of button/links*@
 <p>@ViewBag.message</p>
 @foreach (var item in Model)
 {
+    @*Each link initializes an Employee Controller Action, sends person's id information to the new action*@
 <div class="row">
     <a class="btn btn-default" style="background-color:aliceblue" href="@Url.Action("Employee", "Home", new { id=item.PersonID })">@Html.DisplayFor(modelItem => item.FullName)</a>
 </div>
