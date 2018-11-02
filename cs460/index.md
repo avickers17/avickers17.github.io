@@ -11,6 +11,7 @@ Code and Works can be found via this link: [Repository](https://github.com/avick
 3. [Homework 3](https://avickers17.github.io/cs460/HW3/): C#, Java Code Translation
 4. [Homework 4](https://avickers17.github.io/cs460/HW4/): ASP.NET, MVC 5 Basics
 5. [Homework 5](https://avickers17.github.io/cs460/HW5/): ASP.NET, MVC 5 Using a One Table Database
+6. [Homework 6](https://avickers17.github.io/cs460/HW6/): ASP.NET, MVC web application that uses portions of a large, complex pre-existing database
 
 # Notes - Final
 1. [Git]()
