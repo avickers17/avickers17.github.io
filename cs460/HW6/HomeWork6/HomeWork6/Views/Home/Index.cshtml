@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+    <h1>CS 460 HomeWork 6</h1>
+    <p class="lead">A MVC web application that uses portions of a large, complex pre-existing database</p>
+    <p><a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2></h2>
+        <p style="font-weight:600">
+            To search this Database by Client (Customer or Employee) Click below:
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Search", "Home")">Search Client &raquo;</a></p>
+    </div>
+</div>
