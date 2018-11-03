@@ -1,4 +1,4 @@
-﻿namespace Homework6.Models
+namespace HomeWork6.Models
 {
     using System;
     using System.Data.Entity;
