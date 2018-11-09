@@ -64,9 +64,7 @@ namespace HomeWork6.Controllers
 
                 //Get a second list of order information for LineProfit data
                 var secondTotal = vm.Orders.SelectMany(i => i.Invoices).SelectMany(inv => inv.InvoiceLines).Select(price => new
-                {
-                    price.LineProfit
-                }).ToList();
+                { price.LineProfit}).ToList();
 
                 //Set vm.GrossProfit to the sum of second list
                 vm.GrossProfit = secondTotal.Select(i => i.LineProfit).Sum();

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="text-align:center">Internet Language Translator</h2>
+<form method="get">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <input class="form-control" type="text" id="translator" placeholder="Start typing your message here..." onkeypress="return noenter()">
+
+        </div>
+        <div class="col-sm-2">
+            <input class="btn btn-default" onclick="return clear()" value="Clear" type="submit"></input>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <br />
+    <div class="col-sm-2"></div>
+    <div id="results" class="col-sm-8"></div>
+    <div class="col-sm-2"></div>
+</div>
+@section PageScripts
+{
+    <script type="text/javascript" src="~/Scripts/pics.js"></script>
+}
+
+
+
