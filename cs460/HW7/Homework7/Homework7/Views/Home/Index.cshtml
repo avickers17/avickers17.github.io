@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+@*Content for View Page/Input Area for User*@
 <h2 style="text-align:center">Internet Language Translator</h2>
 <form method="get">
     <div class="row">
@@ -13,16 +13,14 @@
 
         </div>
         <div class="col-sm-2">
-            <input class="btn btn-default" onclick="return clear()" value="Clear" type="submit"></input>
+            <input class="btn btn-default" onclick="return clear()" value="Clear" type="submit">
         </div>
     </div>
 </form>
-<div class="row">
-    <br />
-    <div class="col-sm-2"></div>
-    <div id="results" class="col-sm-8"></div>
-    <div class="col-sm-2"></div>
+@*Location that user typed information will be inserted into the page once space bar is pressed*@
+<div id="results" class="row">
 </div>
+@*Java Script Location Start*@
 @section PageScripts
 {
     <script type="text/javascript" src="~/Scripts/pics.js"></script>
