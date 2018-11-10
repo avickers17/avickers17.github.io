@@ -48,6 +48,7 @@ function clear() {
 function noenter() {
     return !(window.event && window.event.keyCode == 13);
 }
+```
 
 ### Giphy Setup (Account and Key Creation)
 Next we had to create an account with Giphy and register as a developer.  With this registration, we were provided an authentication key that would allow our program to make the get requests to Giphy and receive JSON data back from their servers.  Hiding this key was also crucial as we didnt want to make the call simply in our Javascript.  Doing so could expose our key to our users if they looked into our GET request.  Instead we make the call to Giphy inside of the controller and we have our controller pull the key from an outside file.  An example of how I used this in my controller is shown below: 
