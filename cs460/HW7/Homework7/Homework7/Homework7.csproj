@@ -101,6 +101,7 @@
     <Content Include="App_Data\Searches_log.ldf">
       <DependentUpon>Searches.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Select.sql" />
     <Content Include="App_Data\Up.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

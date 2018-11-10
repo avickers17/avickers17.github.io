@@ -21,7 +21,7 @@ namespace Homework7.Controllers
         public JsonResult Picture(string id)
         {
             //get my apiKey for giphy
-            string apiKey = System.Web.Configuration.WebConfigurationManager.AppSettings["CS460EmailConfirmationKey"];
+            string apiKey = System.Web.Configuration.WebConfigurationManager.AppSettings["CS460ConfirmationKey"];
             
             //build URL for GET request to giphy, including my key and url parameter
             string urlInfo = "https://api.giphy.com/v1/stickers/translate?api_key=" + apiKey + "&s=" + id;

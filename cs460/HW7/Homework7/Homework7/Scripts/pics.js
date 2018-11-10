@@ -16,7 +16,7 @@ function apiRequest(results) {
     var c = b[b.length - 1];
 
     //create a source API path to my controller and include last word as url parameter
-    var source = "/API/Picture/" + c;
+    var source = "/Search/Picture/" + c;
 
     //This makes the get request to my controller
     $.ajax({
