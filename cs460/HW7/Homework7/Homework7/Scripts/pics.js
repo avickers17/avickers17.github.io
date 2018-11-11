@@ -31,7 +31,7 @@ function apiRequest(results) {
 //If Get Request is successful, get the json data and get the url out of it
 function displayData(data) {
     //list of words not to be turned into pics
-    var boringWords = ["and", "if", "or", "to", "I'm", "not", "for", "not", "do", "my", "going"];
+    var boringWords = ["and", "if", "or", "to", "I'm", "not", "for", "not", "do", "my", "going", "be", "in"];
     var input = document.getElementById('translator');
 
     //Again get the last value of what the user typed
