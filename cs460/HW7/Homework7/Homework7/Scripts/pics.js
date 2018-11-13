@@ -29,7 +29,7 @@ function displayData(data) {
     var image = data.data.images.original.url;
 
     //Append picture to the page using the url provided
-    $('#results').append("<img src='" + image + "'/></div>");
+    $('#results').append("<img src='" + image + "'style='height:120px;width:120px;margin:25px;'/></div>");
     }
 
 //If ajax call has an error, return an error to the console
