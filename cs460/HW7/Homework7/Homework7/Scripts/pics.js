@@ -48,8 +48,12 @@ $('#translator').bind('keypress', function (e) {
         var c = b[b.length - 1];
         var bool = true;
 
-        //list of words not to be turned into pics
-        var boringWords = ["and", "if", "or", "to", "I'm", "not", "for", "do", "my", "going", "be", "in", "but", "the", "at"];
+        //list of conjuction words not to be turned into pics www.smart-words.org/linking-words/conjunctions.html
+        var boringWords = ["And", "but", "for", "nor", "or", "so", "yet", "though", "although", "even", "though", "while", "lest", "if",
+            "unless", "until", "that", "even", "in", "than", "rather", "whether", "as", "much", "whereas", "after", "long",
+            "soon", "before", "by", "the", "time", "now", "once", "since", "till", "until", "when", "whenever", "while", "because",
+            "since", "so", "order", "why", "what", "whatever", "which", "whichever", "who", "whoever", "whom", "whomever", "whose",
+            "how", "where", "wherever", "I'm", "to", "my"]
 
         //Compare the last word entry to the list of boring words
         for (var i = 0; i < boringWords.length; i++) {
