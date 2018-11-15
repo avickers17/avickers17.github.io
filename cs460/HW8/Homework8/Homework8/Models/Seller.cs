@@ -18,6 +18,7 @@ namespace Homework8.Models
         public int ID { get; set; }
 
         [Key]
+        [Display(Name = "Seller:"), Required]
         [StringLength(50)]
         public string FullName { get; set; }
 

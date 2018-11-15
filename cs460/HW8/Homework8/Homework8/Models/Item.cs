@@ -14,13 +14,14 @@ namespace Homework8.Models
             Bids = new HashSet<Bid>();
         }
 
+        [Display(Name = "Item Number"), Required]
         public int ID { get; set; }
 
-        [Required]
+        [Display(Name = "Item Name:"), Required]
         [StringLength(100)]
         public string Name { get; set; }
 
-        [Required]
+        [Display(Name = "Description of the Item:"), Required]
         public string Description { get; set; }
 
         [Required]

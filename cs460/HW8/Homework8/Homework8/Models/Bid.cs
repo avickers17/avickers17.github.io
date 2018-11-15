@@ -16,9 +16,16 @@ namespace Homework8.Models
         [StringLength(50)]
         public string BuyerFullName { get; set; }
 
+        [Display(Name = "Amount:"), Required]
+        [RegularExpression(@"^\d+$", ErrorMessage = "Enter only a positive value")]
         public int Price { get; set; }
 
-        public DateTime TimeStamp { get; set; }
+        private DateTime Date = DateTime.Now;
+
+        public DateTime TimeStamp {
+            get { return Date; }
+            set { Date = value; }
+        }
 
         public virtual Item Item { get; set; }
 

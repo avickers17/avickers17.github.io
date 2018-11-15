@@ -8,7 +8,7 @@ namespace Homework8.Models
     public partial class EFAuctionContext : DbContext
     {
         public EFAuctionContext()
-            : base("name=EFAuctionContext")
+            : base("name=AuctionHouse")
         {
         }
 

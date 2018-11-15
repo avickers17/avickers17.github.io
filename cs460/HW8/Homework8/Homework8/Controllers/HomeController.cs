@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Homework8.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +9,35 @@ namespace Homework8.Controllers
 {
     public class HomeController : Controller
     {
+        private EFAuctionContext db = new EFAuctionContext();
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        // GET: Items/Create
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.BuyerFullName = new SelectList(db.Buyers, "FullName", "FullName");
+            ViewBag.ItemID = new SelectList(db.Items, "ID", "ID");
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,ItemID,BuyerFullName,Price,TimeStamp")] Bid bid)
         {
-            ViewBag.Message = "Your contact page.";
+            if (ModelState.IsValid)
+            {
+                db.Bids.Add(bid);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-            return View();
+            ViewBag.BuyerFullName = new SelectList(db.Buyers, "FullName", "FullName", bid.BuyerFullName);
+            ViewBag.ItemID = new SelectList(db.Items, "ID", "ID", bid.ItemID);
+            return View(bid);
         }
     }
 }

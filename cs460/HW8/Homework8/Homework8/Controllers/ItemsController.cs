@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Homework8.Models;
+using Homework8.Models.ViewModels;
 
 namespace Homework8.Controllers
 {
@@ -28,7 +29,7 @@ namespace Homework8.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            BidDashBoardVM item = new BidDashBoardVM() { Item = db.Items.Find(id) };
             if (item == null)
             {
                 return HttpNotFound();
@@ -36,7 +37,7 @@ namespace Homework8.Controllers
             return View(item);
         }
 
-        // GET: Items/Create
+        // GET: Home/Create
         public ActionResult Create()
         {
             ViewBag.SellerFullName = new SelectList(db.Sellers, "FullName", "FullName");
