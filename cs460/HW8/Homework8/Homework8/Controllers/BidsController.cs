@@ -20,20 +20,21 @@ namespace Homework8.Controllers
         [HttpGet]
         public JsonResult List(int? id)
         {
-            
+            string nothing = "";
             BidDashBoardVM bidList = new BidDashBoardVM();
             bidList.Item = db.Items.Find(id);
-            
-            string list = "";
-            if (bidList.Item.Bids.Count > 0) { 
-                bidList.Bids = db.Bids.Where(x => x.ItemID.Equals(id)).ToList();
+            bidList.Bids = db.Bids.Where(x => x.ItemID.Equals(1001)).OrderByDescending(i => i.Price).ToList();
 
-                list = JsonConvert.SerializeObject(bidList.Bids);
-
-                //bidlist.Bids = db.Bids.Where(x => x.ItemID.Equals(1001)).OrderByDescending(i => i.Price).ToList();
+            if (bidList.Item.Bids.Count > 0) {
+                var list = db.Bids
+                    .Select(i => new {Ident = i.ItemID,  Name = i.BuyerFullName, Amount = i.Price, CreateDate = i.TimeStamp })
+                    .OrderByDescending(i => i.Amount)
+                    .Where(i => i.Ident == id)
+                    .ToList();
+                return Json(list, JsonRequestBehavior.AllowGet);
             }
 
-            return Json(list, JsonRequestBehavior.AllowGet);
+            return Json(nothing, JsonRequestBehavior.AllowGet);
         }
     }
 }

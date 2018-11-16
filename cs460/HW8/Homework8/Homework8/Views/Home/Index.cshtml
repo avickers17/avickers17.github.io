@@ -1,26 +1,70 @@
-﻿@{
+﻿@model IEnumerable<Homework8.Models.Bid>
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="row">
     <div class="col-md-6">
-        <img src="@Url.Content("~/Content/Images/Title.png")" style="width:400px; height:280px" />
+        <img src="@Url.Content("~/Content/Images/Title.png")" style="width:300px; height:210px" />
     </div>
     <div class="col-md-6">
-        <img src="@Url.Content("~/Content/Images/Auction.png")" style="width:400px; height:280px" />
+        <img src="@Url.Content("~/Content/Images/Auction.png")" style="width:300px; height:210px" />
     </div>
 </div>
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Items For Sale</h2>
-            <p>
-                Click here to see a complete list of items that are currently up For bid
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("Index", "Items")">See Items for Sale! &raquo;</a></p>
-        </div>
-        <div class="col-md-6">
-            <h2>Place a Bid</h2>
-            <p>Click here to place a bid on a item </p>
-            <p><a class="btn btn-default" href="@Url.Action("Create", "Home")">Bid on an Item! &raquo;</a></p>
-        </div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Items For Sale</h2>
+        <p>
+            Click here to see a complete list of items that are currently up For bid
+        </p>
+        <p><a class="btn btn-default" style="background-color:red; color:white" href="@Url.Action("Index", "Items")">See Items for Sale! &raquo;</a></p>
     </div>
+    <div class="col-md-6">
+        <h2>Place a Bid</h2>
+        <p>Click here to place a bid on a item </p>
+        <p><a class="btn btn-default" style="background-color:red; color:white" href="@Url.Action("Create", "Home")">Bid on an Item! &raquo;</a></p>
+    </div>
+</div>
+<hr />
+<div class="container" id="newList">
+    <h4 class="tableBegin" style="text-decoration: underline">Top 10 Most Recent Bids:</h4>
+    <table class='table'>
+        <thead class='thead'>
+            <tr>
+                <th scope='col'>Item Number: </th>
+                <th scope='col'>Item Name: </th>
+                <th scope='col'>Current Highest Bidder: </th>
+                <th scope='col'>Current Bid: </th>
+                <th scope='col'>Date and Time of Bid: </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemID)
+                </td>
+                <td>
+                    @Html.ActionLink(item.Item.Name, "Details", "Items", new { id = item.ItemID }, new { @class = "link" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BuyerFullName)
+                </td>
+                <td>
+                    @string.Format("{0:C}", item.Price)
+                </td>
+                <td>
+                    @if (item.TimeStamp.Date == DateTime.Today)
+                    {
+                        DateTime dt = item.TimeStamp;
+                        <p>@dt.ToString("h:mm:ss tt")</p>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.TimeStamp)
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

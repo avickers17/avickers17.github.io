@@ -24,7 +24,7 @@ namespace Homework8.Models
         [Display(Name = "Description of the Item:"), Required]
         public string Description { get; set; }
 
-        [Required]
+        [Display(Name = "Seller:"), Required]
         [StringLength(50)]
         public string SellerFullName { get; set; }
 

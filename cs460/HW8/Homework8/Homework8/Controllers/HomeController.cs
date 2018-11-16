@@ -1,4 +1,5 @@
 ﻿using Homework8.Models;
+using Homework8.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,9 @@ namespace Homework8.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            BidDashBoardVM vm = new BidDashBoardVM();
+            var bids = db.Bids.OrderByDescending(i => i.TimeStamp).Take(10).ToList();
+            return View(bids);
         }
 
         // GET: Items/Create
