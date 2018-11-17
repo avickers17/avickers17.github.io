@@ -21,7 +21,7 @@ namespace Homework5.Models
         public string LastName { get; set; }
 
         [Display(Name = "Phone Number:"), Required]
-        [RegularExpression("^[0-9]{3}-[0-9]{3}-[0-9]{4}$", ErrorMessage = "Enter Phone Number in the format of: 999-999-9999")]
+        [RegularExpression(@"^\$?", ErrorMessage = "Enter Phone Number in the format of: 999-999-9999")]
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Apartment Name:"), Required]

@@ -1,0 +1,51 @@
+﻿@model Homework8.Models.ViewModels.BidDashBoardVM
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+<div>
+    <h4>Item Specific Information:</h4>
+    <hr />
+    <dl class="dl-horizontal" id="megaTable">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.ID)
+            <input value="@Model.Item.ID" id="ident" hidden="hidden"/>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.SellerFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.SellerFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.Description)
+        </dd>
+    </dl>
+</div>
+@*Location of appended table info*@
+<div class="container" id="newList">
+    <h4 class="tableBegin" style="text-decoration: underline">Current Bids on this Item:</h4>
+        <table class='table'>
+        </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Item.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@*Java Script Location Start*@
+@section PageScripts
+{
+    <script type="text/javascript" src="~/Scripts/bids.js"></script>
+}

@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#megaTable {
+    font-style: italic;
+    border: 2px solid black;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+#theader {
+    text-decoration: underline;
+}
+
