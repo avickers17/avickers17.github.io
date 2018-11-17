@@ -11,7 +11,7 @@ namespace Homework8.Models
             : base("name=AuctionHouse")
         {
         }
-
+        //Database Context Class for lists
         public virtual DbSet<Bid> Bids { get; set; }
         public virtual DbSet<Buyer> Buyers { get; set; }
         public virtual DbSet<Item> Items { get; set; }

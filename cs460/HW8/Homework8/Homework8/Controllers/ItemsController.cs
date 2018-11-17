@@ -45,24 +45,23 @@ namespace Homework8.Controllers
         }
 
         // POST: Items/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Name,Description,SellerFullName")] Item item)
         {
+            //if form state is filled in correctly, update the db and redirect to the list page
             if (ModelState.IsValid)
             {
                 db.Items.Add(item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            //otherwise show item create page
             ViewBag.SellerFullName = new SelectList(db.Sellers, "FullName", "FullName", item.SellerFullName);
             return View(item);
         }
 
-        // GET: Items/Edit/5
+        // GET: Items/Edit/
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,9 +77,7 @@ namespace Homework8.Controllers
             return View(item);
         }
 
-        // POST: Items/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Items/Edit/
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Name,Description,SellerFullName")] Item item)
@@ -95,7 +92,7 @@ namespace Homework8.Controllers
             return View(item);
         }
 
-        // GET: Items/Delete/5
+        // GET: Items/Delete/
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -110,7 +107,7 @@ namespace Homework8.Controllers
             return View(item);
         }
 
-        // POST: Items/Delete/5
+        // POST: Items/Delete/
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

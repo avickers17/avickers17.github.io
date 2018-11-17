@@ -33,8 +33,8 @@
             <tr>
                 <th scope='col'>Item Number: </th>
                 <th scope='col'>Item Name: </th>
-                <th scope='col'>Current Highest Bidder: </th>
-                <th scope='col'>Current Bid: </th>
+                <th scope='col'>Name of Bidder: </th>
+                <th scope='col'>Bid Amount: </th>
                 <th scope='col'>Date and Time of Bid: </th>
             </tr>
         </thead>
@@ -45,6 +45,7 @@
                     @Html.DisplayFor(modelItem => item.ItemID)
                 </td>
                 <td>
+                    @*Name is actually a link to details page*@
                     @Html.ActionLink(item.Item.Name, "Details", "Items", new { id = item.ItemID }, new { @class = "link" })
                 </td>
                 <td>
@@ -54,6 +55,7 @@
                     @string.Format("{0:C}", item.Price)
                 </td>
                 <td>
+                    @*Show date if bid was placed after today, otherwise only show time*@
                     @if (item.TimeStamp.Date == DateTime.Today)
                     {
                         DateTime dt = item.TimeStamp;
