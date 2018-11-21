@@ -14,6 +14,7 @@ Code and Works can be found via this link: [Repository](https://github.com/avick
 6. [Homework 6](https://avickers17.github.io/cs460/HW6/): ASP.NET, MVC web application that uses portions of a large pre-existing database
 7. [Homework 7](https://avickers17.github.io/cs460/HW7/): ASP.NET, MVC web application that employs AJAX to build responsive views
 8. [Homework 8](https://avickers17.github.io/cs460/HW8/): ASP.NET, MVC web application that uses a multi-table, relational database instance
+9. [Homework 9](https://avickers17.github.io/cs460/HW9/): ASP.NET, MVC web application/cloud deployment for HW8
 
 # Notes - Final
 1. [Git]()
