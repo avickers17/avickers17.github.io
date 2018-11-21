@@ -19,6 +19,7 @@ For this assignment, we were to take our MVC Application from HW8 and deploy it 
 Create an account with Azure. 
 
 Create Page:
+
 ![Create](Create-Azure.png)
 
 Then create a resource group:
@@ -30,7 +31,8 @@ Then create a resource group:
 6. Click Create
 
 Add a Resouce:
-![Resouce](Resouce.png)
+
+![Resouce](Resource.png)
 
 ### Database (Server on Azure)
 On Azure Select SQL Databases:
@@ -50,6 +52,7 @@ On Azure Select SQL Databases:
 14. Click Create
 
 Add a Database:
+
 ![DB](Create-DB.png)
 
 ### Connect Locally to Microsoft SQL Server Management Studio
@@ -61,6 +64,7 @@ Open up Microsoft SQL Server Management Studio
 5. Next to Server Name click the copy button
 
 Get the DB Server Name:
+
 ![Server](Server-Name.png)
 
 6. Paste this in the Management Studio Section for "Server Name"
