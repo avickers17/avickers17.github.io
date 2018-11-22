@@ -9,7 +9,7 @@ For this assignment, we were to take our MVC Application from HW8 and deploy it 
 ## Links
 1. [Assignment Page](https://www.wou.edu/~morses/classes/cs46x/assignments/HW9_1819.html)
 2. [Code Repository for HW8](https://github.com/avickers17/avickers17.github.io/tree/master/cs460/HW8)
-3. [Cloud Deployment Link]()
+3. [Cloud Deployment Link](http://auctionhouseapp.azurewebsites.net/)
 
 ## Want to go back?
 * Back to my Homepage: [Homepage](https://avickers17.github.io)
@@ -55,6 +55,17 @@ Add a Database:
 
 ![DB](Create-DB.png)
 
+### Firewall (Adding a Rule)
+On Azure select the resource group in question
+1. From there select your SQL server
+2. Under Firewalls and Virtual Networks, select Show firewall settings
+3. Add a rule by giving it a name and allowing your IP address access to the server (can also select a range)
+4. Click Save (Important)
+
+Add a Firewall Rule:
+
+![Firewall](Fire.png)
+
 ### Connect Locally to Microsoft SQL Server Management Studio
 Open up Microsoft SQL Server Management Studio
 1. Click on Connect
@@ -72,10 +83,62 @@ Get the DB Server Name:
 8. Enter Credentials for Azure SQL DB Server Information
 9. Enter Login and Password Information
 10. Click Connect
-11. Firewall etc...
+
 
 Management Studio Now Connected:
+
 ![MS](MS-SQL.png)
+
+### Connect to the online server in MVC
+Open the Server Explorer tab
+1. Under Azure, select SQL Databases
+2. Select the DB and right click, select open in SQL Server Object Explorer
+3. Right click SQL Server, click add SQL server
+4. Under Azure, select the DB and enter password
+5. Run up script and make connection to DB
+
+DB Now Updated:
+
+![DB](Online-DB.png)
+
+### Get the Connection String
+The Connection String is online through Azure
+1. On Azure select SQL Databases
+2. Select Database and find option for Connection Strings
+3. Replace old connection string and DB name with new connection information
+4. In String update server user name and pw
+
+
+### Create Web App on Azure
+Back at Azure, Click on App Services
+1. Click on Add
+2. Select Web App, and hit Create
+3. Name the App
+4. Pay as you go/Use Existing Resource Group
+5. App Service Plan: F1 WestPlanFree
+6. Click Create
+7. Back at App Services, select the App
+8. Under Application Settings left, look for Connection Strings
+9. Click Add New Connection String
+10. "Name" should be DB name and "Value" should be connection string
+11. "Type" is SQL server
+12. Click "Save"
+
+Web App Created:
+
+![WebApp](Web-App.png)
+
+
+### Deply to Azure
+To publish we need to follow the below steps:
+1. In MVC, under build click on Publish
+2. New Profile, then Click App Service
+3. Select Existing, then Select our App from the list below
+4. If a refresh, click on publish
+
+App on Azure Live:
+
+![WebApp](App.png)
 
 
 

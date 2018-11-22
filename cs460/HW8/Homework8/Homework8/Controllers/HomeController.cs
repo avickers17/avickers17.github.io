@@ -22,7 +22,7 @@ namespace Homework8.Controllers
             return View(bids);
         }
 
-        // GET: Home/Create
+        // GET: Items/Create
         public ActionResult Create()
         {
             //code for create new item viewpage
