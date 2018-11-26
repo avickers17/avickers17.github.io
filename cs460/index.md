@@ -17,7 +17,7 @@ Code and Works can be found via this link: [Repository](https://github.com/avick
 9. [Homework 9](https://avickers17.github.io/cs460/HW9/): ASP.NET, MVC web application/cloud deployment for HW8
 
 # Notes - Final
-1. [Git]()
+1. [Git](https://avickers17.github.io/cs460/Final Info/git-cheatsheet.pdf)
 
 ## Want to go back?
 Back to my Homepage: [Homepage](https://avickers17.github.io)
