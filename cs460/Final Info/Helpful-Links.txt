@@ -1,0 +1,8 @@
+//Dom Information:
+https://quirksmode.org/dom/core/
+
+//JS Examples:
+http://javascriptbook.com/code/c06/
+
+//JQuery Helpers:
+https://oscarotero.com/jquery/

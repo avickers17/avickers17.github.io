@@ -128,6 +128,20 @@ $("document").ready(function(){
    //targeting all links that go to google
    $("a[href*='google']").css("font-weight","bolder");
    
+   // Select and modify
+$("li.sales").addClass("cheap");
+// same as
+window.jQuery("li.sales").addClass("cheap");
+
+// Remove the hidden class from all dd elements
+$("dd").removeClass("hidden");
+
+// Chaining and effects 
+// (from http://javascriptbook.com/code/c07/chaining.html)
+$('li[id!="one"]').hide().delay(500).fadeIn(1400);
+
+// Create a new p element node and add it
+$("<p id="test">My <em>new</em> text</p>").appendTo( "body" );
  
 
 });

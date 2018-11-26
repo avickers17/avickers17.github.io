@@ -22,7 +22,8 @@ Code and Works can be found via this link: [Repository](https://github.com/avick
 3. [BootStrap](https://avickers17.github.io/cs460/Final Info/bootstrapcheatsheet)
 4. [CSS](https://avickers17.github.io/cs460/Final Info/csscheatsheet)
 5. [Javascript](https://avickers17.github.io/cs460/Final Info/javascriptcheatsheet)
-5. [JQuery](https://avickers17.github.io/cs460/Final Info/JQuery)
+6. [JQuery](https://avickers17.github.io/cs460/Final Info/JQuery)
+7. [Helpful Links](https://avickers17.github.io/cs460/Final Info/Helpful-Links.txt)
 
 ## Want to go back?
 Back to my Homepage: [Homepage](https://avickers17.github.io)

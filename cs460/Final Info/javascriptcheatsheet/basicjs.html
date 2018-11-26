@@ -21,6 +21,79 @@
 	</div> 
 	
 	<script>
+	
+	// 64 bit floating point numbers
+const PI = 3.14159;
+var a = 72;
+
+/* Unicode strings, immutable */
+var firstName = "Dorothy";
+var lastName = 'Dingl\u0BD0erry';
+var someʘther = "I see you";
+
+/* Boolean */
+var ok = true;
+
+// price is undefined, there is no literal for undefined
+var price;
+
+// null acts as 0 or false
+var myObject = null;
+
+// Objects have properties and methods
+var car = {
+	doors: 5,
+	make: "Tesla",
+	model: "P100D",
+	drive: function() { console.log("Driving my " + this.make); } 
+};
+
+var obj1 = { id: 2394340, name: "Bob", aliases: ["Robert","Jake"] };
+var obj2 = {};
+obj2.name = "Carol"; 
+obj2["age"] = 5;
+
+var obj3 = new Object();
+
+// ??
+var obj4 = {a: 5, 5:73, "":"hi"};
+
+// Objects have properties and methods
+var car = {
+	doors: 5,
+	make: "Tesla",
+	model: "P100D",
+	drive: function() { console.log("Driving my " + this.make); } 
+};
+
+var obj1 = { id: 2394340, name: "Bob", aliases: ["Robert","Jake"] };
+var obj2 = {};
+obj2.name = "Carol"; 
+obj2["age"] = 5;
+
+var obj3 = new Object();
+
+// ??
+var obj4 = {a: 5, 5:73, "":"hi"};
+
+// Function
+var adder = new Function("a","b","return a + b");
+var ans = adder(4,7);
+
+// Plain old function
+function square(n){				// square(6)
+	return n * n;
+}
+
+// Function expression (anonymous function)
+var cube = function(x) { return x**3; };	// cube(7)
+
+// Immediately invoked function expression (IIFE or "iffy")
+var area = (function(w,h) { 			// area
+	return w * h; 
+}(5,2));
+
+
 	//(Declaring Variables
 	//var number = 1;
 	//(Declaring Arrays
