@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="style.css">
+
+    <title>My Website</title>
+  </head>
+  <body id="body">  
+  	<div class="header">
+		<h1 id="heading">Learning</h1>
+	</div>
+	<div class="container">
+	  <form method="post" action="something.php" name="myForm" onsubmit="return ValidateForm()">
+	  <div>
+	    <label>First Name</label>
+		  <input type="text" name="firstName" id="firstName"/>
+	  </div>
+	  <br />
+	  <div>
+	     <label>Last Name</label>
+		  <input type="text" name="lastName" id="lastName"/>
+	  </div>
+	  <br />
+	  <div>
+	    <label>Background</label>
+		<select name="background" id="background" onchange="changeBackground(this)">
+		    <option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+		</select>
+		<br>
+		<input type="submit" value="Submit" />
+	  
+	  </div>
+	  
+	  </form>
+  
+	</div> 
+	
+	<script>
+    function changeBackground(x){
+	  console.log(x.value);
+	  var heading = document.getElementById('heading');
+	    heading.style.color = x.value;
+	  var body = document.getElementById('body');
+	    body.style.backgroundColor = x.value;
+	  }
+	  function ValidateForm(){
+	    var firstName = document.getElementById('firstName')
+		//var firstName = document.forms["myForm"]["firstName"].value;
+		if(firstName.value == null || firstName.value == ""){
+		  alert("First Name is Required");
+		  return false;
+	    }
+		if(firstName.value.length < 3){
+		  alert("First Name must be at least 3 characters");
+		  return false;
+	    }
+	  }
+	</script>
+  </body>
+</html>

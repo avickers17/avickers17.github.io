@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="style.css">
+
+    <title>My Website</title>
+  </head>	
+  <body onload="showDate()">
+  	<div class="header">
+		<h1 id="heading">Learning</h1>
+	</div>
+	<div class="container">
+		
+	<!-- <button onclick="showDate()">Show Date</button> -->
+    <button onmouseout = "clearDate()" onmouseover="showDate()">Show Date</button>
+	<h1 id="time"></h1>
+	</div> 
+	
+	<script>
+	function showDate(){
+	   var time = document.getElementById('time');
+	   time.innerHTML = Date();
+	   }
+	   function clearDate(){
+	     var time = document.getElementById('time');
+	   time.innerHTML = "";
+	   }
+	  
+		//function changeText(id){
+		  //id.innerHTML = 'You Clicked!';
+		  //}
+		//function changeText(){
+		  //var heading = document.getElementById('heading');
+		  //heading.innerHTML = 'You Clicked!';
+		//}
+	</script>
+  </body>
+</html>
